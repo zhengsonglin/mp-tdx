@@ -1,0 +1,31 @@
+<!--pages/component/advertising/index.wxml-->
+<view class="row-advertising">
+	<view class="bg-white flex">
+        
+		<!-- 左边标题部分-->
+		<view class="left-title" wx:if="{{ !userLeftSlot && title.length}}">
+			<text class="adv-title" >{{title}}</text>
+		</view>
+		<view class="left-title" wx:elif="{{userLeftSlot}}">
+			<slot name="title"></slot>
+		</view>
+        <!-- 右边内容部分-->
+		<view class="{{(userLeftSlot || title.length)?'right-content':'response'}}">
+
+			<view class="adv-content" wx:if="{{datas.length}}">
+
+				<swiper class="mySwiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{autoplayTime}}" circular="{{circular}}" vertical="{{vertical}}">
+					<block wx:for="{{datas}}" wx:key="*this">
+						<swiper-item>
+							<text class="padding-left-sm">{{item.text}}</text>
+						</swiper-item>
+					</block>
+				</swiper>
+			</view>
+
+
+		</view>
+
+	</view>
+
+</view>

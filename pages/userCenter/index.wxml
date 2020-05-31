@@ -1,0 +1,12 @@
+<!--pages/userCenter/index.wxml-->
+<cu-custom bgColor="bg-gradual-green">
+	<view slot="content">会员中心</view>
+</cu-custom>
+<view class="padding flex">
+	<navigator url="/pages/logs/logs" class="padding-right-xl">
+  		<button class="cu-btn bg-grey lg">logs</button>
+  	</navigator>
+	  <navigator url="/pages/test/index">
+  		<button class="cu-btn bg-blue lg">测试</button>
+  	</navigator>
+</view>

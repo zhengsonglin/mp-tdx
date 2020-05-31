@@ -1,0 +1,25 @@
+/* pages/login/login.wxss */
+page {
+    background-color: var(--white);
+}
+.container {
+    padding: 0;
+}
+.logo {
+    width: 56%;
+    max-height: 75px;
+    margin: 60px auto 40px;
+}
+
+.text-input {
+    width: 80%;
+    margin: 0 auto 20px;
+}
+.text-input input {
+    height: 40px;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-appearance: none;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+}

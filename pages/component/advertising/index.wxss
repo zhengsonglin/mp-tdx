@@ -1,0 +1,10 @@
+.left-title{
+    flex-basis: 25%;
+}
+.right-content{
+    flex-basis: 75%;
+}
+.mySwiper, .adv-title{
+    height: 34px;
+    line-height: 34px;
+}

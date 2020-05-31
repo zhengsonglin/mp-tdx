@@ -1,0 +1,23 @@
+<!--pages/component/tabbar.wxml-->
+
+<view class="cu-bar tabbar bg-white shadow foot box">
+	<view class="action {{PageCur=='home'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="home">
+		<view class="{{PageCur=='home'?'cuIcon-homefill':'cuIcon-home'}}"></view> 首页
+	</view>
+	<view class="action {{PageCur=='question'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="question">
+		<view class="{{PageCur=='question'?'cuIcon-questionfill':'cuIcon-question'}}"></view> 问题集
+	</view>
+	
+	<view class="action {{PageCur=='order'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="order">
+		<view class="{{PageCur=='order'?'cuIcon-newshotfill':'cuIcon-newshot'}}">
+			<!--<view class="cu-tag badge">99</view>-->
+		</view>
+		订单
+	</view>
+	<view class="action {{PageCur=='userCenter'?'text-green':'text-gray'}}" bindtap="NavChange" data-cur="userCenter">
+		<view class="{{PageCur=='userCenter'?'cuIcon-myfill':'cuIcon-my'}}">
+			<!--<view class="cu-tag badge"></view>-->
+		</view>
+		我的
+	</view>
+</view>

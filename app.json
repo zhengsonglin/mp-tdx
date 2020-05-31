@@ -1,0 +1,26 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/login/register/register",
+        "pages/login/forget/forgetpwd",
+        "pages/home/index",
+        "pages/question/index",
+        "pages/orders/index",
+        "pages/userCenter/index",
+        "pages/logs/logs",
+        "pages/test/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "淘大熊",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "custom"
+    },
+    "styles": "v2",
+    "usingComponents": {
+        "cu-custom": "/colorui/components/cu-custom"
+    },
+    "sitemapLocation": "sitemap.json"
+}

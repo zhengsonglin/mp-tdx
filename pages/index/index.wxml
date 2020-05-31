@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<home wx:if="{{PageCur=='home'}}"></home>
+<question wx:if="{{PageCur=='question'}}"></question>
+<orders wx:if="{{PageCur=='order'}}"></orders>
+<user-center wx:if="{{PageCur=='userCenter'}}"></user-center>
+<mp-tabbar bind:trigerNavChange="bindNavChange"></mp-tabbar>

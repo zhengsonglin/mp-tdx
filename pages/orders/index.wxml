@@ -1,0 +1,5 @@
+<!--pages/orders/index.wxml-->
+<cu-custom bgColor="bg-gradual-green">
+	<view slot="content">任务中心</view>
+</cu-custom>
+<text>pages/orders/index.wxml</text>

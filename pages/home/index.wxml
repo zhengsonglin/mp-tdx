@@ -1,0 +1,55 @@
+<!--pages/home/index.wxml-->
+<scroll-view scroll-y class="scrollPage" bindscroll="onPageScroll">
+	<!--自定义导航栏-->
+	<cu-custom bgColor="bg-gradual-green">
+		<view slot="content">首页</view>
+	</cu-custom>
+
+	<!--搜索条-->
+	<view class="cu-bar search header fixed" style="top:{{CustomBar}}px;background-color:{{searchBgColor}};">
+		<view class="search-form round padding-right-sm padding-left-xs" style="background-color:{{inputBgColor}};color:{{inputColor}}">
+			<text class="cuIcon-search" style="font-size: 14px;"></text>
+			<input type="text" placeholder="请输入搜索关键词" confirm-type="search" value="{{searchKey}}" placeholder-style="{{inputPlaceholderColor}}" bindinput="onInputChange" bindconfirm="onSearch"></input>
+			<text class="cuIcon-roundclosefill text-xsl"  wx:if="{{searchKey.length}}" bindtap="onCleanSearchKey" style="font-size: 16px;"></text>
+		</view>
+	</view>
+
+	<!--swiper轮播图-->
+	<mp-swiper height="200px"></mp-swiper>
+	<!--nav导航栏-->
+	<view class="bg-white margin-lr-sm tabNav">
+		<view class="flex">
+			<view class="flex-sub padding-tb-xs">
+				<image src="/img/nav-1.png" mode="aspectFit" class="response pic"></image>
+			</view>
+			<view class="flex-sub padding-tb-xs">
+				<image src="/img/nav-2.png" mode="aspectFit" class="response pic"></image>
+			</view>
+		</view>
+	</view>
+
+	<!--广告，公告-->
+	<view class="margin-sm text-sm advertising">
+		<advertising datas="{{advertisingList}}" userLeftSlot="{{true}}" >
+			<view slot="title">
+				<view class="adv-title padding-left-sm " style="height:34px;line-height:34px;">商城头条
+					<text class="cuIcon-notification lg text-gray"></text>
+				</view>
+			</view>
+		</advertising>
+	</view>
+
+	<view wx:for="{{50}}" wx:key="*this">
+		<text style="height:40px;line-height:40px;">【{{item}}】. pages/test/index.wxml</text>
+	</view>
+	
+	<!--
+	<text>pages/home/index.wxml</text>
+	<text>{{advertisingList}}</text>
+	-->
+	<view style="height:100px;">sadsa</view>
+	<text style="height:40px;line-height:40px;">【999】. pages/test/index.wxml</text>
+	<!--适配底部导航栏-->
+	<view class='cu-tabbar-height'></view>
+</scroll-view>
+

@@ -1,0 +1,19 @@
+/* pages/login/register/register.wxss */
+page {
+  background-color: var(--white);
+}
+.text-input {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+.text-input input {
+  height: 40px;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-appearance: none;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+}
+.text-input .validCode{
+  width: 120px;
+}

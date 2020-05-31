@@ -1,0 +1,12 @@
+<!--pages/test/index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">测试</view>
+</cu-custom>
+
+<scroll-view scroll-y>
+    <view wx:for="{{100}}" wx:key="*this">
+        <text style="height:40px;line-height:40px;">【{{item}}】. pages/test/index.wxml</text>
+    </view>
+</scroll-view>
+
