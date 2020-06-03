@@ -65,3 +65,63 @@
 .my-fans-info .item{
     border-radius: 12rpx;
 }
+.pink{
+    background: linear-gradient(to right,#f0785d,#e35e40);
+}
+.purple{
+    background: linear-gradient(to right,#edb2f8,#df93ed);
+}
+.blue{
+    background: linear-gradient(to right,#509de8,#006fd9);
+}
+.red{
+    background: linear-gradient(to right,#d17575,#a93d3d) ;  
+}
+.orange{
+    background: linear-gradient(to right,#ecb071,#fa8103);
+}
+.black{
+    background: linear-gradient(to right,#9be8e6,#16ccec) ;
+}
+.green{
+    background: linear-gradient(to right,#a3e4a6,#06c00e);
+}
+.yellow{
+    background: linear-gradient(to right,#db916f,#d36331);
+}
+.grid{
+    border-radius: 20rpx;
+}
+.grid .setting-item{
+    position: relative;
+    padding-top: 40rpx;
+	padding-bottom: 40rpx;
+}
+.grid .setting-item::after{
+    position: absolute;
+    box-sizing: border-box;
+    content: " ";
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 4rpx solid #ebedf0;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    z-index: 1;
+}
+.grid .setting-item .li-icon{
+    position: relative;
+    height: 60rpx;
+    line-height: 60rpx;
+    width: 60rpx;
+    border-radius: 10rpx;
+    color: #fff;
+    font-weight: 900;
+    display: inline-block;
+    margin-bottom: 12rpx;
+}
+.suggestion-bk{
+    border-radius: 10rpx;
+}

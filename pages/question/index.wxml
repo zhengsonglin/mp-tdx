@@ -223,7 +223,7 @@
 				<view>答：淘大熊平台——会员中心——下面有个意见反馈，或者联系淘大熊客 服述说登记记录</view>
 			</view>
 		</view>
-		<text>pages/question/index.wxml</text>
+		
 	</view>
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>
