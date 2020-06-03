@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {
+      AB30Count: 20,
+      FAccountBalance: 188.6,
+      FUserName: "18598271043",
+      FInvitationCode: "14983716"
+    },
+    orderType: 1
   },
 
   /**

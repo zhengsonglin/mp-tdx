@@ -1,1 +1,67 @@
 /* pages/userCenter/index.wxss */
+.user-info {
+    height: 180rpx;
+    background: linear-gradient(90deg, #eb3c3c, #ff7459);
+    z-index: 10;
+}
+.user-info .account{
+    position: relative;
+    z-index: 10;
+}
+.account .text-plain{
+    width: 70%;
+    border: 1rpx solid #eee;
+    border-radius: 10rpx;
+}
+.account .tips{
+    width: 70%;
+}
+.user-info::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -114rpx;
+    z-index: 1;
+    content: ' ';
+    height: 120rpx;
+    border-radius: 0 0 50% 50%;
+    background: linear-gradient(90deg, #eb3c3c, #ff7459);
+}
+.user-info .per-bill-img{
+    width: 108rpx;
+    height: 108rpx;
+    border-radius: 50%;
+    background-color: var(--ghostWhite);
+    left: 50%;
+    bottom: -170rpx;
+    z-index: 12;
+    transform: translateX(-54rpx);
+}
+.invit-info{
+    z-index: 12;
+    margin-top: 140rpx;
+}
+.invit-info .con-per-username{
+    color: #80c7c7;
+}
+.invit-info .con-per-invide {
+    color: #fd3c3c;
+}
+.card-info{
+    border-radius: 10rpx;
+}
+.card-info .row-1::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1rpx;
+    content: '';
+    background-color: #c8c7cc;
+}
+.card-info .row-1 .active{
+   color: #fd3c3c;
+}
+.my-fans-info .item{
+    border-radius: 12rpx;
+}

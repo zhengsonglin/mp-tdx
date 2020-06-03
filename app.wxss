@@ -1,6 +1,15 @@
 /**app.wxss**/
 @import "colorui/main.wxss";
 @import "colorui/icon.wxss";
+@import "colorui/icon-font.wxss";
+/**自定义样式start**/
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+
 .scrollPage {
   height: 100vh;
 }
@@ -13,3 +22,4 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+/**自定义样式end**/
