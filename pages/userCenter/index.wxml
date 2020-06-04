@@ -27,6 +27,9 @@
 		<view class="con-per-username text-bold text-xl margin-tb-xs">用户名：<text class="lbl_UserName">{{userInfo.FUserName}}</text></view>
 		<view class="con-per-invide text-bold margin-top-xs">邀请码：<text class="lbl_InviteCode">{{userInfo.FInvitationCode}}</text>
 			<view class="flex fr absolute" style="top:0;right:10rpx;">
+				<navigator url="/pages/webview/index" class="padding-right-sm">
+					<button class="cu-btn bg-blue sm">webview</button>
+				</navigator>
 				<navigator url="/pages/logs/logs" class="padding-right-sm">
 					<button class="cu-btn bg-grey sm">logs</button>
 				</navigator>
@@ -40,8 +43,8 @@
 	<!--订单-->
 	<view class="card-info bg-white margin-sm shadow">
 		<view class="row-1 relative padding-tb-sm padding-left-xs">
-			<text class="margin-xs {{orderType == 1 ? 'active text-bold' : ''}}">限量免单任务</text>
-			<text class="margin-left-xs {{orderType == 2 ? 'active text-bold' : ''}}">熊抢购任务</text>
+			<text class="margin-xs {{orderType == 1 ? 'active text-bold' : ''}}" bindtap="setOrderType" data-oType="1">限量免单任务</text>
+			<text class="margin-left-xs {{orderType == 2 ? 'active text-bold' : ''}}" bindtap="setOrderType" data-oType="2">熊抢购任务</text>
 		</view>
 		<view class="row-2 grid col-4 text-center padding-tb">
 			<view class="order-state">
@@ -49,7 +52,7 @@
 				<view>已申请</view>
 				<view>15</view>
 			</view>
-			<view class="order-state">
+			<view class="order-state" wx:if="{{orderType==1}}">
 				<view><text class="li-icon iconfont icon-tijiao " style="color:#509de8"></text></view>
 				<view>已提交</view>
 				<view>16</view>
@@ -81,16 +84,22 @@
 	<!--九宫格-->
 	<view class="grid col-3 text-center bg-white margin-lg">
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-fenxiang pink text-white"></text></view>
-			<view>分析给好友</view>
+			<navigator url="/pages/userCenter/recommendFriend/index" hover-class="none">	
+				<view><text class="li-icon iconfont icon-fenxiang pink text-white"></text></view>
+				<view>分析给好友</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-baozhengjin1 green text-white"></text></view>
-			<view>定制金返款</view>
+			<navigator url="/pages/userCenter/refundRecord/index" hover-class="none">	
+				<view><text class="li-icon iconfont icon-baozhengjin1 green text-white"></text></view>
+				<view>定制金返款</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-yuding blue"></text></view>
-			<view>预定任务</view>
+			<navigator url="/pages/userCenter/reservationRecord/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-yuding blue"></text></view>
+				<view>预定任务</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
 			<view><text class="li-icon iconfont icon-shimingrenzheng red"></text></view>

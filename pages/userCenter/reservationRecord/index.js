@@ -1,24 +1,13 @@
-// pages/userCenter/index.js
+// pages/userCenter/reservationRecord/index.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfo: {
-            AB30Count: 20,
-            FAccountBalance: 188.6,
-            FUserName: "18598271043",
-            FInvitationCode: "14983716"
-        },
-        orderType: 1
+
     },
-    //设置订单类型
-    setOrderType(e) {
-        this.setData({
-            orderType: e.currentTarget.dataset.otype
-        })
-    },
+
     /**
      * 生命周期函数--监听页面加载
      */

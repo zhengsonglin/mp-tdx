@@ -8,9 +8,12 @@
         "pages/home/index",
         "pages/question/index",
         "pages/orders/index",
-        
         "pages/logs/logs",
-        "pages/test/index"
+        "pages/test/index",
+        "pages/webview/index",
+        "pages/userCenter/recommendFriend/index",
+        "pages/userCenter/refundRecord/index",
+        "pages/userCenter/reservationRecord/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
