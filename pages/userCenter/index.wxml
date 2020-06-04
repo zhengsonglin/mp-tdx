@@ -25,7 +25,17 @@
 	<!--邀请信息-->
 	<view class="invit-info padding-left-xl relative">
 		<view class="con-per-username text-bold text-xl margin-tb-xs">用户名：<text class="lbl_UserName">{{userInfo.FUserName}}</text></view>
-		<view class="con-per-invide text-bold margin-top-xs">邀请码：<text class="lbl_InviteCode">{{userInfo.FInvitationCode}}</text></view>
+		<view class="con-per-invide text-bold margin-top-xs">邀请码：<text class="lbl_InviteCode">{{userInfo.FInvitationCode}}</text>
+			<view class="flex fr absolute" style="top:0;right:10rpx;">
+				<navigator url="/pages/logs/logs" class="padding-right-sm">
+					<button class="cu-btn bg-grey sm">logs</button>
+				</navigator>
+				<navigator url="/pages/test/index">
+					<button class="cu-btn bg-gradual-blue sm">测试</button>
+				</navigator>
+			</view>
+		</view>
+		
 	</view>
 	<!--订单-->
 	<view class="card-info bg-white margin-sm shadow">
@@ -111,7 +121,7 @@
 			<view>新手攻略</view>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon mui-icon-qq pink"></text></view>
+			<view><text class="li-icon iconfont icon-iconfontgerenzhongxin pink"></text></view>
 			<view>投诉与建议</view>
 		</view>
 		<view class="setting-item">
@@ -122,11 +132,10 @@
 	</view>
 
 	<!---->
-	<view class="suggestion-bk bg-white text-center margin">
+	<view class="suggestion-bk bg-white text-center margin shadow">
 		<view class="flex ">
-			<view class="flex-sub padding-lg"><text class="item line">意见反馈</text></view>
-			<view class="flex-sub padding-lg"><text class="item">更新说明</text></view>
-
+			<view class="flex-sub padding-xl relative"><text class="item line">意见反馈</text></view>
+			<view class="flex-sub padding-xl"><text class="item">更新说明</text></view>
 		</view>
 	</view>
 	<view class="padding flex flex-direction">
@@ -135,11 +144,3 @@
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>
 </scroll-view>
-<view class="padding flex">
-	<navigator url="/pages/logs/logs" class="padding-right-xl">
-		<button class="cu-btn bg-grey lg">logs</button>
-	</navigator>
-	<navigator url="/pages/test/index">
-		<button class="cu-btn bg-gradual-blue lg">测试</button>
-	</navigator>
-</view>

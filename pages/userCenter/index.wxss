@@ -125,3 +125,13 @@
 .suggestion-bk{
     border-radius: 10rpx;
 }
+.suggestion-bk .item.line::after{
+    content: "";
+    height: 50%;
+    width: 0;
+    border: 2rpx solid #666;
+    position: absolute;
+    right: 0;
+    top: 25%;
+    transform: scaleX(.5);
+}
