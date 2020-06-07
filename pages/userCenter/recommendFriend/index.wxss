@@ -1,1 +1,6 @@
 /* pages/userCenter/recommendFriend/index.wxss */
+.scrollPage .rec_fri_img image{
+    width: 320rpx;
+    height: 320rpx;
+    
+}

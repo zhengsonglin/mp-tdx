@@ -1,6 +1,23 @@
 <!--pages/userCenter/refundRecord/index.wxml-->
-<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
-	<view slot="backText">返回</view>
-	<view slot="content">定制金返款</view>
-</cu-custom>
-<text>pages/userCenter/refundRecord/index.wxml</text>
+<scroll-view scroll-y class="scrollPage">
+	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">定制金返款</view>
+	</cu-custom>
+
+	<view class="container_title text-center text-red text-lg relative margin-lr-sm">定制金返款记录<text class="iconfont icon-icon-dsj absolute"></text></view>
+	<view class="data-list padding-lr-sm">
+		<view class="row-tb row-title float-wraper">
+			<view class="time">时间</view><view class="order">订单号</view>
+			<view class="record">记录</view><view class="price">金额</view><view class="state">状态</view>
+		</view>
+		<view class="row-tb row-data">
+			<view class="row-line-data float-wraper" wx:for="{{list}}" wx:key="*this">
+				<view class="time">{{item.time}}</view><view class="order">{{item.order}}</view>
+				<view class="record">{{item.record}}</view><view class="price">{{item.price}}</view><view class="state text-red">{{item.state}}</view>
+			</view>
+		</view>
+	</view>
+	
+	
+</scroll-view>
