@@ -13,7 +13,8 @@
         "pages/webview/index",
         "pages/userCenter/recommendFriend/index",
         "pages/userCenter/refundRecord/index",
-        "pages/userCenter/reservationRecord/index"
+        "pages/userCenter/reservationRecord/index",
+        "pages/userCenter/realNameAuthentica/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

@@ -102,8 +102,10 @@
 			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-shimingrenzheng red"></text></view>
-			<view>实名认证</view>
+			<navigator url="/pages/userCenter/realNameAuthentica/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-shimingrenzheng red"></text></view>
+				<view>实名认证</view>
+			</navigator>	
 		</view>
 		<view class="setting-item">
 			<view><text class="li-icon iconfont icon-yinxingqia orange "></text></view>

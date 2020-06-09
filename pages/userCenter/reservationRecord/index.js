@@ -5,14 +5,29 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        TabCur: 1,
+        list:[],
+        list2:[
+            {time:"2020-04-28", fID:"2", fName:"数据线"},
+            {time:"2020-04-23", fID:"1", fName:"抽纸"},
+            {time:"2020-04-16", fID:"3", fName:"搅蛋器"}
+        ]
     },
-
+    tabSelect(e) {
+        var data = this.data.list2,
+            id = e.currentTarget.dataset.id
+        this.setData({
+            TabCur: id,
+            list: id==1?data:[]
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        this.setData({
+            list: JSON.parse(JSON.stringify(this.data.list2))
+        })
     },
 
     /**

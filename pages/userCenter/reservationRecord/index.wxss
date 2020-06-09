@@ -1,1 +1,4 @@
 /* pages/userCenter/reservationRecord/index.wxss */
+.tab-content .row-tb .row-line-data{border-bottom: 2rpx solid #ddd;}
+.tab-content .flex .date, .tab-content .flex .handle{width: 30%;}
+.tab-content .flex .detail{width: 40%;}

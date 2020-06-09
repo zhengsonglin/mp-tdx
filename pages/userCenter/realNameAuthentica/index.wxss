@@ -1,0 +1,7 @@
+/* pages/userCenter/realNameAuthentica/index.wxss */
+.border-top{
+    border-top: 1rpx solid #eee;
+}
+.cu-form-group .title{
+    width: 200rpx;
+}
