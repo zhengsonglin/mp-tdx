@@ -1,0 +1,21 @@
+/* pages/userCenter/financeCenter/index.wxss */
+.scrollPage .container_title{
+    height: 92rpx;
+    line-height: 92rpx;
+    border-bottom: 1px solid red;
+}
+.container_title .icon-icon-dsj{
+    width: 68rpx;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -40rpx;
+    font-size: 44rpx !important;
+}
+.row-tb .row-line-data{
+    border-bottom: 2rpx solid #ddd;
+}
+.row-tb .row-line-data >view{
+    line-height: 40rpx;
+}
+.row-data .row-line-data .state{line-height: 80rpx;}

@@ -108,36 +108,52 @@
 			</navigator>	
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-yinxingqia orange "></text></view>
-			<view>银行卡绑定</view>
+			<navigator url="/pages/userCenter/cardBind/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-yinxingqia orange "></text></view>
+				<view>银行卡绑定</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-tixianfc blue"></text></view>
-			<view>提现记录</view>
+			<navigator url="/pages/userCenter/financeCenter/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-tixianfc blue"></text></view>
+				<view>提现记录</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-tixian blue"></text></view>
-			<view>账户提现</view>
+			<navigator url="/pages/userCenter/withDrawCash/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-tixian blue"></text></view>
+				<view>账户提现</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-caiwu yellow"></text></view>
-			<view>财务中心</view>
+			<navigator url="/pages/userCenter/financeCenter/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-caiwu yellow"></text></view>
+				<view>财务中心</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-iconfontgerenzhongxin green"></text></view>
-			<view>基本资料</view>
+			<navigator url="/pages/userCenter/baseUserInfo/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-iconfontgerenzhongxin green"></text></view>
+				<view>基本资料</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-bangzhu purple"></text></view>
-			<view>新手攻略</view>
+			<navigator url="/pages/userCenter/newUserStrategy/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-bangzhu purple"></text></view>
+				<view>新手攻略</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-iconfontgerenzhongxin pink"></text></view>
-			<view>投诉与建议</view>
+			<navigator url="/pages/userCenter/touSu/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-iconfontgerenzhongxin pink"></text></view>
+				<view>投诉与建议</view>
+			</navigator>
 		</view>
 		<view class="setting-item">
-			<view><text class="li-icon iconfont icon-xiugaimima2 black"></text></view>
-			<view>修改密码</view>
+			<navigator url="/pages/userCenter/changePwd/index" hover-class="none">
+				<view><text class="li-icon iconfont icon-xiugaimima2 black"></text></view>
+				<view>修改密码</view>
+			</navigator>
 		</view>
 
 	</view>
@@ -145,8 +161,16 @@
 	<!---->
 	<view class="suggestion-bk bg-white text-center margin shadow">
 		<view class="flex ">
-			<view class="flex-sub padding-xl relative"><text class="item line">意见反馈</text></view>
-			<view class="flex-sub padding-xl"><text class="item">更新说明</text></view>
+			<view class="flex-sub padding-xl relative">
+				<navigator url="/pages/userCenter/feedBack/index" hover-class="none">
+					<text class="item line">意见反馈</text>
+				</navigator>
+			</view>	
+			<view class="flex-sub padding-xl">
+				<navigator url="/pages/userCenter/updateDescription/index" hover-class="none">
+					<text class="item">更新说明</text>
+				</navigator>
+			</view>
 		</view>
 	</view>
 	<view class="padding flex flex-direction">

@@ -1,0 +1,4 @@
+/* pages/userCenter/withDrawCash/index.wxss */
+.about-user view{
+    line-height: 40rpx;
+}

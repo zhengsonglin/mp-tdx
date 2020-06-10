@@ -1,0 +1,27 @@
+<!--pages/userCenter/financeCenter/index.wxml-->
+<scroll-view scroll-y class="scrollPage bg-white">
+	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">提现记录</view>
+	</cu-custom>
+    
+    <view class="container_title text-center text-red text-lg relative margin-lr-sm">交易明细<text class="iconfont icon-icon-dsj absolute"></text></view>
+
+    <view class="tab-content padding-lr-sm">
+		<view class="row-tb row-title text-center text-black">
+			<view class="row-line-data flex  padding-tb-sm text-bold">
+				<view class="flex-sub time">时间</view><view class="flex-sub money">金额</view>
+				<view class="flex-sub state">状态</view>
+			</view>
+		</view>
+        <view class="row-tb row-data text-center text-sm text-black">
+			<view class="row-line-data flex padding-tb-sm" wx:for="{{list}}" wx:key="*this">
+				<view class="flex-sub time">
+                    <view>{{item.date}}</view><view>{{item.time}} {{item.day}}</view>
+                </view>
+				<view class="flex-sub money"><view>{{item.money}}(人民币)</view><view>银行卡提现</view></view>
+				<view class="flex-sub state text-lg {{item.state==0?'text-red':'text-green'}}">{{item.state==10?'已完成':'待打款'}}</view>
+			</view>
+		</view>
+    </view>    
+</scroll-view>    

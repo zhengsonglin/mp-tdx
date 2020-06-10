@@ -1,0 +1,4 @@
+/* pages/userCenter/cardBind/index.wxss */
+.cu-form-group .title{
+    width: 200rpx;
+}

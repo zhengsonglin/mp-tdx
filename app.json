@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/userCenter/index",
+        "pages/userCenter/index/index",
         "pages/index/index",
         "pages/login/login",
         "pages/login/register/register",
@@ -14,7 +14,17 @@
         "pages/userCenter/recommendFriend/index",
         "pages/userCenter/refundRecord/index",
         "pages/userCenter/reservationRecord/index",
-        "pages/userCenter/realNameAuthentica/index"
+        "pages/userCenter/realNameAuthentica/index",
+        "pages/userCenter/cardBind/index",
+        "pages/userCenter/financeCenter/index",
+        "pages/userCenter/withDrawCash/index",
+        "pages/userCenter/baseUserInfo/index",
+        "pages/userCenter/newUserStrategy/index",
+        "pages/userCenter/touSu/index",
+        "pages/userCenter/changePwd/index",
+        "pages/userCenter/feedBack/index",
+        "pages/userCenter/addFeedBack/index",
+        "pages/userCenter/updateDescription/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
