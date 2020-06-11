@@ -71,18 +71,18 @@
 	</view>
 	<!--邀请人数-->
 	<view class="my-fans-info flex text-center padding-lr-sm margin-tb-lg">
-		<view class="item bg-white margin-lr-sm flex-sub shadow padding-tb">
+		<view class="item bg-white margin-left-sm margin-right-xs flex-sub shadow padding-tb-sm">
 			<view class="text-lg">推荐人数</view>
 			<view class="text-red margin-top-sm text-lg">2</view>
 		</view>
-		<view class="item bg-white margin-lr-sm flex-sub shadow padding-tb">
+		<view class="item bg-white margin-left-xs margin-right-sm flex-sub shadow padding-tb-sm">
 			<view class="text-lg">免单总数</view>
 			<view class="text-red margin-top-sm text-lg">15</view>
 		</view>
 	</view>
 
 	<!--九宫格-->
-	<view class="grid col-3 text-center bg-white margin-lg">
+	<view class="grid col-3 text-center bg-white margin-tb-lg margin-lr-sm">
 		<view class="setting-item">
 			<navigator url="/pages/userCenter/recommendFriend/index" hover-class="none">	
 				<view><text class="li-icon iconfont icon-fenxiang pink text-white"></text></view>
@@ -114,7 +114,7 @@
 			</navigator>
 		</view>
 		<view class="setting-item">
-			<navigator url="/pages/userCenter/financeCenter/index" hover-class="none">
+			<navigator url="/pages/userCenter/financeCenter/index?type=1" hover-class="none">
 				<view><text class="li-icon iconfont icon-tixianfc blue"></text></view>
 				<view>提现记录</view>
 			</navigator>
@@ -126,7 +126,7 @@
 			</navigator>
 		</view>
 		<view class="setting-item">
-			<navigator url="/pages/userCenter/financeCenter/index" hover-class="none">
+			<navigator url="/pages/userCenter/financeCenter/index?type=2" hover-class="none">
 				<view><text class="li-icon iconfont icon-caiwu yellow"></text></view>
 				<view>财务中心</view>
 			</navigator>
@@ -158,8 +158,8 @@
 
 	</view>
 
-	<!---->
-	<view class="suggestion-bk bg-white text-center margin shadow">
+	<!--意见反馈-->
+	<view class="suggestion-bk bg-white text-center margin-tb margin-lr-sm shadow">
 		<view class="flex ">
 			<view class="flex-sub padding-xl relative">
 				<navigator url="/pages/userCenter/feedBack/index" hover-class="none">
@@ -173,7 +173,7 @@
 			</view>
 		</view>
 	</view>
-	<view class="padding flex flex-direction">
+	<view class="padding-sm flex flex-direction">
 		<button class="cu-btn bg-gradual-green margin-tb-sm lg">退出登录</button>
 	</view>
 	<!--适配底部导航栏-->

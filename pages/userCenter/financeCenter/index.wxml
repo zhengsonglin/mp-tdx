@@ -2,7 +2,7 @@
 <scroll-view scroll-y class="scrollPage bg-white">
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
-		<view slot="content">提现记录</view>
+		<view slot="content">{{pageTitle}}</view>
 	</cu-custom>
     
     <view class="container_title text-center text-red text-lg relative margin-lr-sm">交易明细<text class="iconfont icon-icon-dsj absolute"></text></view>

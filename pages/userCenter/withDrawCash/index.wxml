@@ -50,4 +50,18 @@
             <view>5、如有相关问题，请联系平台客服咨询！</view>
         </view>
     </view>
+
+    <view class="cu-modal {{showModal?'show':''}}">
+        <view class="cu-dialog">
+            <view class="cu-bar bg-red justify-end">
+            <view class="content bg-red text-white">提醒</view>
+            <view class="action" bindtap="hideModal">
+                <text class="cuIcon-close text-white"></text>
+            </view>
+            </view>
+            <view class="padding-sm margin-tb-sm" style="line-height:50rpx;font-size:26rpx;">
+                <text>因财务调整，建议优先选择绑定招商银行卡，招行卡提现会更便捷快速，其他银行卡提现、到账时间不变</text>
+            </view>
+        </view>
+    </view>
 </scroll-view>    

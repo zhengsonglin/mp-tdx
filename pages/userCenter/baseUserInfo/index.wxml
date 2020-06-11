@@ -1,2 +1,131 @@
 <!--pages/userCenter/baseUserInfo/index.wxml-->
-<text>pages/userCenter/baseUserInfo/index.wxml</text>
+<!--
+    通过在app.json中配置如下代码，就可以无需增加代码体积情况下直接使用weiui组件库(基于原生小程序拓展组件库)
+    "useExtendedLib": {
+        "weui": true
+    }
+    //在需要使用weiui组件的页面中引入需要使用的组件即可，如下，当前组件在index.js中配置weiui组件 
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+-->
+<scroll-view scroll-y class="scrollPage bg-white">
+	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">个人基本信息</view>
+	</cu-custom>
+
+	<form class="form">
+		<!--
+        <view class="cu-form-group margin-top">
+			<view class="title">注册时间</view>
+			<view>2020-04-07 19:15:50</view>
+		</view>
+		<view class="cu-form-group">
+			<view class="title">用户名</view>
+			<view>18598271043</view>
+		</view>
+       <view class="cu-form-group">
+            <view class="section__title">性别</view>
+            <picker bindchange="sexPickerChange" value="{{sexIndex}}" range="{{sexArray}}">
+                <view class="picker">{{sexIndex?sexArray[sexIndex]:'请选择性别'}}</view>
+            </picker>
+        </view>
+        <view class="cu-form-group">
+			<view class="title">年龄</view>
+			<view>请选择年龄</view>
+		</view>
+        -->
+
+		<mp-cells title="">
+			<mp-cell title="注册时间">
+				<view slot="footer">
+					<view style="display: inline-block;vertical-align:middle;">2020-04-07 19:15:50</view>
+				</view>
+			</mp-cell>
+			<mp-cell title="用户名">
+				<view slot="footer">
+					<view style="display: inline-block;vertical-align:middle;">18598271043</view>
+				</view>
+			</mp-cell>
+			<mp-cell title="性别" link>
+				<view class="response text-right">
+					<picker bindchange="pickerChange" value="{{sexIndex}}" range="{{sexArray}}" class="response" data-picktype="sex">
+						<text class="picker">{{sexIndex?sexArray[sexIndex]:'请选择性别'}}</text>
+					</picker>
+				</view>
+			</mp-cell>
+			<mp-cell title="年龄" link>
+				<view class="response text-right" bindtap="showInputModal" data-type="1">
+					<text class="picker">{{age?age:'请输入您的年龄'}}</text>
+				</view>
+			</mp-cell>
+            <mp-cell title="QQ号码" link>
+				<view class="response text-right" bindtap="showInputModal" data-type="2">
+					<text class="picker">{{qq?qq:'请输入您的QQ'}}</text>
+				</view>
+			</mp-cell>
+            <mp-cell title="我的邮箱" link>
+				<view class="response text-right" bindtap="showInputModal" data-type="3">
+					<text class="picker">{{email?email:'请输入您的邮箱'}}</text>
+				</view>
+			</mp-cell>
+            <mp-cell title="婚姻状况" link>
+				<view class="response text-right">
+					<picker bindchange="pickerChange" value="{{marryIndex}}" range="{{marryArray}}" class="response"   data-picktype="marry">
+						<text class="picker">{{marryIndex?marryArray[marryIndex]:'请选择婚姻状况'}}</text>
+					</picker>
+				</view>
+			</mp-cell>
+            <mp-cell title="教育程度" link>
+				<view class="response text-right">
+					<picker bindchange="pickerChange" value="{{eduIndex}}" range="{{eduArray}}" class="response" data-picktype="edu">
+						<text class="picker">{{eduIndex?eduArray[eduIndex]:'请选择教育程度'}}</text>
+					</picker>
+				</view>
+			</mp-cell>
+           
+            <mp-cell title="所属人群" link>
+				<view class="response text-right">
+					<picker bindchange="pickerChange" value="{{jobIndex}}" range="{{jobArray}}" class="response" data-picktype="job">
+						<text class="picker">{{jobIndex?jobArray[jobIndex]:'请选择所属人群'}}</text>
+					</picker>
+				</view>
+			</mp-cell>
+            <mp-cell title="地址选择" link>
+                <view class="response text-right">
+                    <picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+                    <view class="picker">
+                        {{region[0]}}，{{region[1]}}，{{region[2]}}
+                    </view>
+                </picker>
+                </view>
+            </mp-cell>
+		</mp-cells>
+
+
+        <view class="padding flex flex-direction">
+            <button class="cu-btn bg-gradual-green margin-tb-sm lg">提交</button>
+        </view>
+	</form>
+
+
+
+	<view class="cu-modal {{inputDialog.show?'show':''}}">
+		<view class="cu-dialog">
+			<view class="cu-bar bg-white justify-end">
+				<view class="content">{{inputDialog.type==1?'请输入您的年龄':(inputDialog.type==2?'请输入您的QQ':'请输入您的邮箱')}}</view>
+				<view class="action" bindtap="hideModal">
+					<text class="cuIcon-close text-red"></text>
+				</view>
+			</view>
+			<view class="padding-xl bg-white">
+                <view class="text-left">
+				    <input maxlength="{{inputDialog.type==1?3:20}}" value="{{inputDialog.inputValue}}" bindinput="setInputValue" style="height:80rpx;line-height:80rpx;border:2rpx solid #ddd;border-radius:8rpx;padding-left:20rpx;"/>
+                </view>
+			</view>
+			<view class="cu-bar bg-white">
+				<view class="action margin-0 flex-sub text-green solid-right" bindtap="cancleAgeModal">取消</view>
+				<view class="action margin-0 flex-sub  solid-left" bindtap="confirmAgeModal">确定</view>
+			</view>
+		</view>
+	</view>
+</scroll-view>

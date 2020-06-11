@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        pageTitle:"",
         list: [
             {date:"2020-06-10", time:'11:30:08', money: "200.5元", state:"0", day: "星期三"},
             {date:"2020-06-09", time:'13:19:37', money: "180.5元", state:"10", day: "星期二"},
@@ -17,7 +18,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        //console.log(options)
+        this.setData({
+            pageTitle: options.type=='1'?'提现记录':'财务中心'
+        })
     },
 
     /**

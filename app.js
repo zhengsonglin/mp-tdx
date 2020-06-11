@@ -1,3 +1,10 @@
+//    https://developers.weixin.qq.com/miniprogram/dev/extended/weui/quickstart.html
+//     通过在app.json中配置如下代码，就可以无需增加代码体积情况下直接使用weiui组件库(基于原生小程序拓展组件库)
+//     "useExtendedLib": {
+//         "weui": true
+//     }
+
+
 //app.js
 App({
     onLaunch: function () {
