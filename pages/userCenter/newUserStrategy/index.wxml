@@ -1,2 +1,129 @@
 <!--pages/userCenter/newUserStrategy/index.wxml-->
-<text>pages/userCenter/newUserStrategy/index.wxml</text>
+<scroll-view scroll-y class="scrollPage bg-white">
+	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">新手攻略</view>
+	</cu-custom>
+
+	<view class="cu-list menu sm-border">
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">1、注册账户</view>
+				<view class="text-darkGray padding-left-sm cell-text">邀请码需介绍人提供，在介绍人的会员中心可以看到</view>
+			</view>
+		</view>
+		<view class="cu-item arrow">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">2、实名认证</view>
+				<view class="text-darkGray padding-left-sm cell-text">会员中心-“实名认证”模块里填写实名，需要提供：真实姓名、淘宝账号、对应支付宝截图</view>
+			</view>
+		</view>
+		<view class="cu-item">
+			<view class="content padding-tb-xs">				
+				<text class="text-black cell-title">3、联系客服等待实名认证通过</text>
+			</view>
+		</view>
+        <view class="cu-item arrow">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">4、绑定银行卡</view>
+				<view class="text-darkGray padding-left-sm cell-text">会员中心-绑定银行卡模块填写对应信息</view>
+			</view>
+		</view>
+        <view class="cu-item arrow">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">5、通过审核选取任务</view>
+				<view class="text-darkGray padding-left-sm cell-text">进入首页领取任务，限量免单模块为免单任务；熊抢购模块为真实购买</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">6、任务中心点击“开始任务”</view>
+				<view class="text-darkGray padding-left-sm cell-text">查看任务流程及注意事项，将提供的关键词复制到淘宝首页搜索，找不到对应商品联系客服可更换关键词</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">7、验证链接</view>
+				<view class="text-darkGray padding-left-sm cell-text">找到对应宝贝后复制宝贝链接在平台验证</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">8、淘宝付款</view>
+				<view class="text-darkGray padding-left-sm cell-text">验证成功后浏览宝贝，拍下与平台价格一致的商品，价格不一致可按照任务金额提交后在平台申请售后</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">9、提交订单号</view>
+				<view class="text-darkGray padding-left-sm cell-text">将淘宝的订单编号复制，粘贴到平台验证链接的下方，填写金额，点击提交</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">10、收货好评</view>
+				<view class="text-darkGray padding-left-sm cell-text">收到礼品后，在淘宝收货好评</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">11、上传好评截图</view>
+				<view class="text-darkGray padding-left-sm cell-text">在任务中心-“已提交”-点击“上传好评截图”</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">12、等待商家审核</view>
+				<view class="text-darkGray padding-left-sm cell-text">审核时间最长为36小时</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">13、返本金及提现</view>
+				<view class="text-darkGray padding-left-sm cell-text">审核完成，返还本金到余额，点击申请提现</view>
+			</view>
+		</view>
+        <view class="cu-item">
+			<view class="content padding-tb-xs">
+				<view class="text-black cell-title">14、对本操作有任何疑问均可联系淘大熊客服哦</view>
+			</view>
+		</view>
+	</view>
+    <!--
+	<view class="cu-list menu-avatar">
+		<view class="cu-item">
+			<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+			<view class="content">
+				<view class="text-grey">凯尔</view>
+				<view class="text-gray text-sm flex">
+					<text class="text-cut">
+							<text class="cuIcon-infofill text-red  margin-right-xs"></text> 我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。我已天理为凭，踏入这片荒芜，不再受凡人的枷锁遏制。
+					</text>
+				</view>
+			</view>
+			<view class="action">
+				<view class="text-grey text-xs">22:20</view>
+				<view class="cu-tag round bg-grey sm">5</view>
+			</view>
+		</view>
+		<view class="cu-item">
+			<view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
+				<view class="cu-tag badge">99+</view>
+			</view>
+			<view class="content">
+				<view class="text-grey">
+					<text class="text-cut">瓦洛兰之盾-塔里克</text>
+					<view class="cu-tag round bg-orange sm">战士</view>
+				</view>
+				<view class="text-gray text-sm flex">
+					<text class="text-cut">塔里克是保护者星灵，用超乎寻常的力量守护着符文之地的生命、仁爱以及万物之美。塔里克由于渎职而被放逐，离开了祖国德玛西亚，前去攀登巨神峰寻找救赎，但他找到的却是来自星界的更高层的召唤。现在的塔里克与古代巨神族的神力相融合，以瓦洛兰之盾的身份，永不疲倦地警惕着阴险狡诈的虚空腐化之力。</text>
+				</view>
+			</view>
+			<view class="action">
+				<view class="text-grey text-xs">22:20</view>
+				<view class="cuIcon-notice_forbid_fill text-gray"></view>
+			</view>
+		</view>
+	</view>
+    -->
+</scroll-view>

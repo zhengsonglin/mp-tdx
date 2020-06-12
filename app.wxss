@@ -3,6 +3,9 @@
 @import "colorui/icon.wxss";
 @import "colorui/icon-font.wxss";
 /**自定义样式start**/
+.text-darkGray{
+  color: var(--darkGray)
+}
 .relative{
   position: relative;
 }

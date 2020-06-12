@@ -1,1 +1,7 @@
 /* pages/userCenter/newUserStrategy/index.wxss */
+.cu-list .content .cell-title {
+    font-size: 28rpx;
+}
+.cu-list .content .cell-text {
+    font-size: 24rpx;
+}
