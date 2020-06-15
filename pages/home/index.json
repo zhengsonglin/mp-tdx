@@ -3,7 +3,8 @@
   "usingComponents": {
     "mp-swiper": "../component/swiper/index",
     "advertising": "../component/advertising/index",
-    "listView": "../component/listView/listView"
+    "listView": "../component/listView/listView" ,
+    "refresh-view": "../component/RefreshView/refresh-view"
   }
   
 }

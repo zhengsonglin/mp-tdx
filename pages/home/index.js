@@ -32,49 +32,36 @@ Component({
         },
         //回车搜索
         onSearch(e) {
-             console.log(e)
+            console.log(e)
         },
-        //子组件的pageScroll
+        //子组件的pageScroll, //页面滚动
         onPageScroll(e) {
-            
-            var scrollTop = e.detail.scrollTop, c = 255,
+            var scrollTop = e.detail.scrollTop,
+                c = 255,
                 swiperHeight = Number(this.data.swiperHeight.replace("px", "")),
-                ratio = parseFloat( (scrollTop / swiperHeight).toFixed(2) ),
-                ratio = ratio>1?1:ratio,
-                c = parseInt( 255*(1-ratio) ) ;
-            if(ratio < 0.2) {
+                ratio = parseFloat((scrollTop / swiperHeight).toFixed(2)),
+                ratio = ratio > 1 ? 1 : ratio,
+                c = parseInt(255 * (1 - ratio));
+            if (ratio < 0.2) {
                 ratio = 0.2;
-            } else if(ratio > 0.9) {
+            } else if (ratio > 0.9) {
                 ratio = 0.9;
             }
-           
-             
-            //console.log(e.detail.scrollTop, ratio, c)
-            console.log(c)
+            //console.log(scrollTop, ratio, c)
+            //console.log(c)
             this.setData({
-                searchBgColor: "rgba(255,0,0, "+ratio+")",
-                inputBgColor: "rgba(255,255,255, "+ratio+")",
-                inputColor: "rgba("+c+", "+c+", "+c+", 1)",
-                inputPlaceholderColor: "color:rgba("+c+", "+c+", "+c+", 1)",
+                searchBgColor: "rgba(255,0,0, " + ratio + ")",
+                inputBgColor: "rgba(255,255,255, " + ratio + ")",
+                inputColor: "rgba(" + c + ", " + c + ", " + c + ", 1)",
+                inputPlaceholderColor: "color:rgba(" + c + ", " + c + ", " + c + ", 1)",
             })
         },
-        onRefresh:function(e){
-            var callback = e.detail;
-            setTimeout(function(){
-                callback.success();
-            },3000)
-        },
-        onLoadMore: function (e) {
-            var callback = e.detail;
-            setTimeout(function () {
-                callback.fail();
-            }, 3000)
-        },
+       
     },
     /*组件生命周期*/
     lifetimes: {
         created() {
-            console.log("在组件实例刚刚被创建时执行")
+            console.log("在组件实例刚刚被创建时执行");
         },
         attached() {
             console.log("在组件实例进入页面节点树时执行")

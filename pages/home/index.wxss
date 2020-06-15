@@ -1,10 +1,10 @@
 /* pages/home/index.wxss */
 .tabNav .pic{
-    height: 76px;
+    height: 152rpx;
 }
 .advertising{
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20rpx;
 }
 
 

@@ -17,7 +17,7 @@
 	<!--swiper轮播图-->
 	<mp-swiper height="{{swiperHeight}}"></mp-swiper>
 	<!--nav导航栏-->
-	<view class="bg-white margin-lr-sm tabNav">
+	<view class="bg-white margin-lr-sm margin-top-sm tabNav">
 		<view class="flex">
 			<view class="flex-sub padding-tb-xs">
 				<image src="/img/nav-1.png" mode="aspectFit" class="response pic"></image>
@@ -39,16 +39,13 @@
 		</advertising>
 	</view>
 
-	<view wx:for="{{50}}" wx:key="*this">
-		<text style="height:40px;line-height:40px;">【{{item}}】. pages/test/index.wxml</text>
+	<view >
+		<view wx:for="{{50}}" wx:key="*this">
+			<text style="height:40px;line-height:40px;">【{{item}}】. pages/test/index.wxml</text>
+		</view>
+		
+		<text style="height:40px;line-height:40px;">【999】. pages/test/index.wxml</text>
 	</view>
-	
-	<!--
-	<text>pages/home/index.wxml</text>
-	<text>{{advertisingList}}</text>
-	-->
-	<view style="height:100px;">sadsa</view>
-	<text style="height:40px;line-height:40px;">【999】. pages/test/index.wxml</text>
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>
 </scroll-view>
