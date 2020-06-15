@@ -15,7 +15,7 @@
 	</view>
 
 	<!--swiper轮播图-->
-	<mp-swiper height="200px"></mp-swiper>
+	<mp-swiper height="{{swiperHeight}}"></mp-swiper>
 	<!--nav导航栏-->
 	<view class="bg-white margin-lr-sm tabNav">
 		<view class="flex">

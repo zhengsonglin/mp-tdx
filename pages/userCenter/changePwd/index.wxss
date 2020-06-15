@@ -1,1 +1,17 @@
 /* pages/userCenter/changePwd/index.wxss */
+.scrollPage .container_title{
+    height: 92rpx;
+    line-height: 92rpx;
+    border-bottom: 1px solid red;
+}
+.container_title .icon-icon-dsj{
+    width: 68rpx;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -40rpx;
+    font-size: 44rpx !important;
+}
+.cu-form-group .title{
+    width: 180rpx;
+}

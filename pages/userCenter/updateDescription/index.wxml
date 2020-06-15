@@ -1,2 +1,18 @@
 <!--pages/userCenter/updateDescription/index.wxml-->
-<text>pages/userCenter/updateDescription/index.wxml</text>
+<!--pages/userCenter/feedBack/index.wxml-->
+<scroll-view scroll-y class="scrollPage bg-white">
+	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">更新通知</view>
+	</cu-custom>
+    <view class="content ">
+        <view class="empty text-center padding-top-xl">
+            <view class="no-pic margin-top" style="display: inline-block">
+                <image src="/img/empty-image-default.png" mode="widthFix"></image>
+            </view>
+            <view class="text-gray">暂无更新内容</view>
+        </view>
+
+    </view>
+</scroll-view>
+

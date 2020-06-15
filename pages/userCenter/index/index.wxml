@@ -6,7 +6,7 @@
 <scroll-view scroll-y class="scrollPage">
 	<!--头部信息-->
 	<view class="user-info relative">
-		<view class="text-white text-center padding-top-xl padding-bottom-sm">
+		<view class="text-white text-center padding-top padding-bottom-sm">
 			<view><text class="total-num text-xxl">{{userInfo.AB30Count}}</text></view>
 			<view><text class="total-num-desc text-df">免单30天总单量</text></view>
 		</view>
@@ -16,7 +16,7 @@
 			</view>
 			<view class="flex-sub">
 				<view class="text-plain fl margin-left-xs padding-xs">积分：<text>0</text></view>
-				<view class="tips fl margin-xs text-center text-xs">100积分=1元</view>
+				<view class="tips fl margin-xs text-center text-sm">100积分=1元</view>
 			</view>
 		</view>
 
@@ -41,12 +41,12 @@
 		
 	</view>
 	<!--订单-->
-	<view class="card-info bg-white margin-sm shadow">
+	<view class="card-info bg-white margin-sm margin-top shadow">
 		<view class="row-1 relative padding-tb-sm padding-left-xs">
 			<text class="margin-xs {{orderType == 1 ? 'active text-bold' : ''}}" bindtap="setOrderType" data-oType="1">限量免单任务</text>
 			<text class="margin-left-xs {{orderType == 2 ? 'active text-bold' : ''}}" bindtap="setOrderType" data-oType="2">熊抢购任务</text>
 		</view>
-		<view class="row-2 grid col-4 text-center padding-tb">
+		<view class="row-2 grid col-4 text-center padding-tb-sm">
 			<view class="order-state">
 				<view><text class="li-icon iconfont icon-moban " style="color:#d17575"></text></view>
 				<view>已申请</view>
