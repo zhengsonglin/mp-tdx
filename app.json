@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/userCenter/index/index",
+        
         "pages/index/index",
         "pages/login/login",
         "pages/login/register/register",
@@ -8,6 +8,7 @@
         "pages/home/index",
         "pages/question/index",
         "pages/orders/index",
+        "pages/userCenter/index/index",
         "pages/logs/logs",
         "pages/test/index",
         "pages/webview/index",

@@ -2,7 +2,7 @@
 const app = getApp();
 Component({
     options: {
-        addGlobalClass: true,
+        addGlobalClass: true
     },
     properties: {
 
@@ -10,9 +10,10 @@ Component({
     data: {
         CustomBar: app.globalData.CustomBar,
         searchBgColor: "rgba(255,0,0,0.2)",
+        swiperHeight: "170px",
         inputBgColor: "rgba(255,255,255,0.2)",
-        inputColor: "rgba(255,255,255,0.8)",
-        inputPlaceholderColor: "color:rgba(255,255,255,0.8)",
+        inputColor: "rgba(255,255,255,1)",
+        inputPlaceholderColor: "color:rgba(255,255,255,1)",
         searchKey: "",
         advertisingList: app.globalData.advertisingList
     },
@@ -35,7 +36,27 @@ Component({
         },
         //子组件的pageScroll
         onPageScroll(e) {
-            //console.log(e)
+            
+            var scrollTop = e.detail.scrollTop, c = 255,
+                swiperHeight = Number(this.data.swiperHeight.replace("px", "")),
+                ratio = parseFloat( (scrollTop / swiperHeight).toFixed(2) ),
+                ratio = ratio>1?1:ratio,
+                c = parseInt( 255*(1-ratio) ) ;
+            if(ratio < 0.2) {
+                ratio = 0.2;
+            } else if(ratio > 0.9) {
+                ratio = 0.9;
+            }
+           
+             
+            //console.log(e.detail.scrollTop, ratio, c)
+            console.log(c)
+            this.setData({
+                searchBgColor: "rgba(255,0,0, "+ratio+")",
+                inputBgColor: "rgba(255,255,255, "+ratio+")",
+                inputColor: "rgba("+c+", "+c+", "+c+", 1)",
+                inputPlaceholderColor: "color:rgba("+c+", "+c+", "+c+", 1)",
+            })
         },
         onRefresh:function(e){
             var callback = e.detail;

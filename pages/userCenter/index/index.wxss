@@ -20,10 +20,10 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -114rpx;
+    bottom: -110rpx;
     z-index: 1;
     content: ' ';
-    height: 120rpx;
+    height: 134rpx;
     border-radius: 0 0 50% 50%;
     background: linear-gradient(90deg, #eb3c3c, #ff7459);
 }
@@ -33,13 +33,13 @@
     border-radius: 50%;
     background-color: var(--ghostWhite);
     left: 50%;
-    bottom: -170rpx;
+    bottom: -164rpx;
     z-index: 12;
     transform: translateX(-54rpx);
 }
 .invit-info{
     z-index: 12;
-    margin-top: 140rpx;
+    margin-top: 150rpx;
 }
 .invit-info .con-per-username{
     color: #80c7c7;
@@ -50,14 +50,8 @@
 .card-info{
     border-radius: 10rpx;
 }
-.card-info .row-1::after {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 1rpx;
-    content: '';
-    background-color: #c8c7cc;
+.card-info .row-1 {
+    border-bottom: 2rpx solid #ddd;
 }
 .card-info .row-1 .active{
    color: #fd3c3c;
