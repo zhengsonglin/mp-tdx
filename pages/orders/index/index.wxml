@@ -1,0 +1,92 @@
+<!--pages/orders/index.wxml-->
+
+<view class="scrollPage">
+	<cu-custom bgColor="bg-gradual-green">
+		<view slot="content">任务中心</view>
+	</cu-custom>
+	<scroll-view scroll-x class="bg-white nav fixed" style="top:{{CustomBar}}px">
+		<view class="flex text-center">
+			<view class="cu-item flex-sub {{index==tabIndex?'text-orange cur':''}}" wx:for="{{navTabList}}" wx:key="state" bindtap="navTabSelect" data-id="{{index}}">
+				{{item.name}}
+			</view>
+		</view>
+	</scroll-view>
+
+	<scroll-view scroll-y bindtouchstart='handletouchstart' bindtouchmove='handletouchmove' bindtouchend='handletouchend' bindtouchcancel='handletouchcancel' style="height:calc(100vh - {{CustomBar}}px - 100rpx - 90rpx);margin-top:90rpx;">
+		<refresh-view id='refreshView' backgroundColor="#fff" bind:onRefresh="onPullDownRefresh" refreshHeight="100" bind:onPullState="_pullState" />
+		<view class="order-item bg-white margin-sm" wx:for="{{datas}}" wx:key="id">
+			<view class="o-top">
+				<view class="tag-wrap flex justify-between text-white">
+					<view class=""><text class="cu-tag bg-orange margin-right-sm">淘宝</text>{{item.shop_name}}</view>
+					<view class=" ">任务状态:<text class="margin-left-sm text-df">{{item.stateText}}</text></view>
+				</view>
+				<view class="o-top-l fl padding-xs">
+					<image src="{{item.url}}" mode="widthFix"></image>
+				</view>
+				<view class="o-top-r fl padding-xs text-sm">
+					<view class="text-df"><text>{{item.title}}</text></view>
+					<view class="margin-top-xs ">订单号:<text class="margin-left-xs">{{item.orderNo}}</text></view>
+					<view class="margin-top-xs ">总价:<text class="margin-left-xs text-orange">{{item.price}}</text></view>
+					<view class="margin-top-xs ">实拍:<text class="margin-left-xs text-pink">{{item.actPrice}}</text></view>
+					<view class="margin-top-xs">买家旺旺:<text class="margin-left-xs text-blue">zold845517008</text></view>
+				</view>
+			</view>
+			<view class="o-bottom">
+				<view>
+					<button class="cu-btn sm bg-red margin-left-sm" bindtap="showGoodsInfo" data-item="{{item}}">商品信息</button>
+					<button class="cu-btn sm bg-blue margin-left" bindtap="toRefundDetail" data-item="{{item}}">申请售后</button>
+					<button class="cu-btn sm bg-green margin-left" bindtap="uploadScreenShot" data-item="{{item}}">查看好评截图</button>
+					<button class="cu-btn sm bg-pink margin-left" bindtap="showRemarkDialog">查看商家备注</button>
+				</view>
+				<view class="flex text-sm justify-around padding-tb-xs">
+					<text class="sub text-left">申请时间：{{item.create_time}}</text>
+					<text class="sub text-right">完成时间：{{item.finish_time}}</text>
+				</view>
+			</view>
+		</view>
+	</scroll-view>
+
+	<!--商品信息-->
+	<view class="cu-modal {{showProductDialog?'show':''}}">
+		<view class="cu-dialog">
+			<view class="cu-bar bg-orange justify-end">
+				<view class="content">{{productItem.shop_name}}</view>
+				<view class="action" bindtap="hideProductDialog">
+					<text class="cuIcon-close text-white"></text>
+				</view>
+			</view>
+			<view class="bg-white text-left padding padding-top-xs text-pink">
+				<view class="margin-tb-xs">店铺名：{{productItem.shop_name}}</view>
+				<view>下单价：{{productItem.actPrice}}</view>
+				<view class="margin-tb-xs">礼品：{{productItem.title}}</view>
+				<view class="bg-img" style="max-height:600rpx;">
+					<image src="{{productItem.url}}" mode="aspectFit" ></image>
+				</view>
+			</view>
+			<view class="cu-bar bg-white">
+				<view class="action margin-0 flex-sub  solid-left" bindtap="hideProductDialog">我知道了</view>
+			</view>
+		</view>
+	</view>
+	<!-- 查看商家备注 -->
+	<view class="cu-modal {{showRemarkDialog?'show':''}}">
+		<view class="cu-dialog">
+			<view class="cu-bar bg-orange justify-end">
+				<view class="content">商家备注</view>
+				<view class="action" bindtap="hideRemarkDialog">
+					<text class="cuIcon-close text-white"></text>
+				</view>
+			</view>
+			<view class="bg-white text-center padding padding-xl">
+				<view class="margin-tb-xs">
+					暗号【1】，下单····-----氟美斯滤袋?133X1500mm【非常时期，部分区域不能及时发货，疫情解封后会及时处理，请谅解！！！】涉及运费问题请联系客服包邮
+				</view>	
+			</view>
+			<view class="cu-bar bg-white">
+				<view class="action margin-0 flex-sub  solid-left" bindtap="hideRemarkDialog">知道了</view>
+			</view>
+		</view>
+	</view>
+	<!--适配底部导航栏-->
+	<view class='cu-tabbar-height'></view>
+</view>

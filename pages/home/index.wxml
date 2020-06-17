@@ -30,7 +30,7 @@
 
 	<!--广告，公告-->
 	<view class="margin-sm text-sm advertising">
-		<advertising datas="{{advertisingList}}" userLeftSlot="{{true}}" >
+		<advertising datas="{{advertisingList}}" userLeftSlot="{{true}}">
 			<view slot="title">
 				<view class="adv-title padding-left-sm " style="height:34px;line-height:34px;">商城头条
 					<text class="cuIcon-notification lg text-gray"></text>
@@ -39,6 +39,7 @@
 		</advertising>
 	</view>
 
+	<!---->
 	<view >
 		<view wx:for="{{50}}" wx:key="*this">
 			<text style="height:40px;line-height:40px;">【{{item}}】. pages/test/index.wxml</text>
@@ -46,7 +47,7 @@
 		
 		<text style="height:40px;line-height:40px;">【999】. pages/test/index.wxml</text>
 	</view>
+	
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>
 </scroll-view>
-

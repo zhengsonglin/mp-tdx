@@ -1,5 +1,7 @@
 // pages/home/index.js
 const app = getApp();
+let pageStart = 0;
+
 Component({
     options: {
         addGlobalClass: true
@@ -16,6 +18,7 @@ Component({
         inputPlaceholderColor: "color:rgba(255,255,255,1)",
         searchKey: "",
         advertisingList: app.globalData.advertisingList
+        
     },
     methods: {
         //搜索input发生change事件

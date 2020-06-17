@@ -1,0 +1,22 @@
+/* pages/orders/index.wxss */
+.scrollPage .order-item{
+    
+}
+.order-item .o-top{
+    overflow: hidden;
+}
+.o-top .tag-wrap{
+    padding: 8rpx 12rpx;
+    background: #cdc0bf;
+    font-size: 26rpx;
+}
+.o-top .tag-wrap .o-tag{
+
+}
+.order-item .o-top-l{
+    width:40%;
+}
+.order-item .o-top-r{
+    width: 60%;
+    color: #333;
+}

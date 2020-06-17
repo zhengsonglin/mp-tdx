@@ -1,13 +1,11 @@
 {
     "pages": [
-        
         "pages/index/index",
         "pages/login/login",
         "pages/login/register/register",
         "pages/login/forget/forgetpwd",
         "pages/home/index",
         "pages/question/index",
-        "pages/orders/index",
         "pages/userCenter/index/index",
         "pages/logs/logs",
         "pages/test/index",
@@ -25,7 +23,10 @@
         "pages/userCenter/changePwd/index",
         "pages/userCenter/feedBack/index",
         "pages/userCenter/addFeedBack/index",
-        "pages/userCenter/updateDescription/index"
+        "pages/userCenter/updateDescription/index",
+        "pages/orders/index/index",
+        "pages/orders/refundDetial/index",
+        "pages/orders/uploadScreenShot/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -42,5 +43,4 @@
     "useExtendedLib": {
         "weui": true
     }
-    
 }

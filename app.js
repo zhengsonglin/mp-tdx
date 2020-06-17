@@ -42,11 +42,12 @@ App({
         // 获取系统状态栏信息
         wx.getSystemInfo({
             success: e => {
-                this.globalData.StatusBar = e.statusBarHeight;
-                let capsule = wx.getMenuButtonBoundingClientRect();
+                this.globalData.StatusBar = e.statusBarHeight;  //系统状态栏高度, 属性单位px
+                let capsule = wx.getMenuButtonBoundingClientRect(); //胶囊按钮属性, 属性单位px
+                //console.log(capsule, e.statusBarHeight)
                 if (capsule) {
                     this.globalData.Custom = capsule;
-                    this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
+                    this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight+2;
                 } else {
                     this.globalData.CustomBar = e.statusBarHeight + 50;
                 }
