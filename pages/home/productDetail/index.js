@@ -1,44 +1,39 @@
-// pages/userCenter/index.js
-const app = getApp();
+// pages/home/productDetail/index.js
+const app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        userInfo: {
-            AB30Count: 20,
-            FAccountBalance: 188.6,
-            FUserName: "18598271043",
-            FInvitationCode: "14983716"
-        },
-        orderType: 1
+        StatusBar: app.globalData.StatusBar,
+        CustomBar: app.globalData.CustomBar,
+        productInfo:{},
+        showDialog: false
     },
-    //设置订单类型
-    setOrderType(e) {
-        this.setData({
-            orderType: e.currentTarget.dataset.otype
-        })
-    },
-    //跳转到相应订单
-    switchTab: function (e) {    
-        app.globalData.tabBar = "order"
-        //console.log("e", e.currentTarget.dataset.state)       
-        this.triggerEvent('trigerTabChange', {PageCur: "order", state: e.currentTarget.dataset.state}) 
-    },
-    //退出
-    logout: function (e) {    
-        wx.navigateTo({
-          url: '/pages/login/login',
-        })
-    },
+
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        //console.log(options.item)
+        this.setData({
+            productInfo: JSON.parse(options.item)
+        })
     },
 
+    //显示客服弹窗
+    showCustomerDialog: function (e){
+        this.setData({
+            showDialog: true,
+        })
+    },
+    //隐藏客服弹窗
+    hideCustomerDialog: function (e){
+        this.setData({
+            showDialog: false,
+        })
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

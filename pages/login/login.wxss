@@ -2,9 +2,7 @@
 page {
     background-color: var(--white);
 }
-.container {
-    padding: 0;
-}
+
 .logo {
     width: 56%;
     max-height: 75px;

@@ -1,10 +1,13 @@
 <!--pages/login/login.wxml-->
-<cu-custom bgColor="bg-gradual-orange">
-	<view slot="content">登录</view>
-</cu-custom>
-<scroll-view scroll-y class="scrollPage">
-	<view class="container">
-		<image src="http://localhost:8989/img/logo.d1cf1c5a.png" mode="widthFix" class="logo"></image>
+<view class="fullScreenPage">
+	<cu-custom bgColor="bg-gradual-orange">
+		<view slot="content">登录</view>
+	</cu-custom>
+
+	<view class="response">
+		<view class="text-center">
+			<image src="/img/logo.png" mode="widthFix" class="logo"></image>
+		</view>
 		<view class="text-input">
 			<input type="text" placeholder="请输入账号" maxlength="11" value="{{phone}}"></input>
 		</view>
@@ -21,4 +24,4 @@
 		</view>
 	</view>
 
-</scroll-view>
+</view>

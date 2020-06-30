@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mp-swiper": "../component/swiper/index",
+    "advertising": "../component/advertising/index",
+    "scroll": "../component/scroll/index"
+  }
+  
+}

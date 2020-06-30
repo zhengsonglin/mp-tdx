@@ -174,7 +174,7 @@
 		</view>
 	</view>
 	<view class="padding-sm flex flex-direction">
-		<button class="cu-btn bg-gradual-green margin-tb-sm lg">退出登录</button>
+		<button class="cu-btn bg-gradual-green margin-tb-sm lg" bindtap="logout">退出登录</button>
 	</view>
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>

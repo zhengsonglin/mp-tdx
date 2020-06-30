@@ -1,5 +1,5 @@
 <!--pages/orders/refundDetial/index.wxml-->
-<scroll-view scroll-y class="scrollPage bg-white">
+<view class="fullScreenPage bg-white">
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
 		<view slot="content">申请售后</view>
@@ -51,4 +51,4 @@
 	<view class="padding flex flex-direction">
 		<button class="cu-btn bg-gradual-green margin-tb-sm lg">提交</button>
 	</view>
-</scroll-view>
+</view>

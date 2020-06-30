@@ -2,6 +2,9 @@
 page {
   background-color: var(--white);
 }
+.register-form{
+  padding-top: 140rpx;
+}
 .text-input {
   width: 80%;
   margin: 0 auto 20px;

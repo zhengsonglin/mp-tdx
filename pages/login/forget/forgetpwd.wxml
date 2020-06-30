@@ -1,11 +1,12 @@
 <!--pages/login/forget/forgetpwd.wxml-->
-<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
-	<view slot="backText">返回</view>
-	<view slot="content">找回密码</view>
-</cu-custom>
+<view class="fullScreenPage">
+	<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">找回密码</view>
+	</cu-custom>
 
-<scroll-view scroll-y class="scrollPage">
-	<view class="container">
+
+	<view class="response forget-form">
 		<view class="text-input">
 			<input type="text" placeholder="请输入手机号码" maxlength="11" value="{{phone}}" bindinput="updateValue" data-type="phone"></input>
 		</view>
@@ -24,4 +25,4 @@
 			<button class="cu-btn bg-orange margin-tb-sm lg response shadow" bindtap="doSubmit">提交密码</button>
 		</view>
 	</view>
-</scroll-view>
+</view>

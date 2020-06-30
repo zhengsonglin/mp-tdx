@@ -1,9 +1,10 @@
 {
     "pages": [
-        "pages/index/index",
+        
         "pages/login/login",
         "pages/login/register/register",
         "pages/login/forget/forgetpwd",
+        "pages/index/index",
         "pages/home/index/index",
         "pages/question/index",
         "pages/userCenter/index/index",

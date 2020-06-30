@@ -64,7 +64,7 @@
 				</view>
 			</view>
 			<view class="cu-bar bg-white">
-				<view class="action margin-0 flex-sub  solid-left" bindtap="hideProductDialog">我知道了</view>
+				<view class="action margin-0 flex-sub  solid-left text-orange" bindtap="hideProductDialog">我知道了</view>
 			</view>
 		</view>
 	</view>
@@ -83,7 +83,7 @@
 				</view>	
 			</view>
 			<view class="cu-bar bg-white">
-				<view class="action margin-0 flex-sub  solid-left" bindtap="hideRemarkDialog">知道了</view>
+				<view class="action margin-0 flex-sub  solid-left text-orange" bindtap="hideRemarkDialog">知道了</view>
 			</view>
 		</view>
 	</view>

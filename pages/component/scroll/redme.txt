@@ -1,0 +1,4 @@
+参考 wxp-ui , https://ext.dcloud.net.cn/plugin?id=850
+https://github.com/wxp-ui/wxp-ui/tree/master/components/scroll
+
+用法 https://github.com/wxp-ui/wxp-ui/blob/master/pages/scroll/index.wxml

@@ -2,6 +2,9 @@
 page {
   background-color: var(--white);
 }
+.forget-form{
+  padding-top: 160rpx;
+}
 .text-input {
   width: 80%;
   margin: 0 auto 20px;
