@@ -4,7 +4,7 @@
 //         "weui": true
 //     }
 
-
+const util = require('./utils/util.js')
 //app.js
 App({
     onLaunch: function () {
@@ -83,5 +83,9 @@ App({
                 text: "【必读】放单节奏问题"
             },
         ]
+    },
+    //数字转百分比保留n位小数
+    percent(point, n){
+        return utils.percent(point, n)
     }
 })

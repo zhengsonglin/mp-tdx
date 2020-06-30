@@ -1,9 +1,10 @@
 <!--pages/userCenter/realNameAuthentica/index.wxml-->
-<scroll-view scroll-y class="scrollPage bg-white nav">
+<view class="fullScreenPage bg-white nav"> 
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
 		<view slot="content">实名认证</view>
 	</cu-custom>
+   
 	<form>
 		<view class="cu-form-group margin-top">
 			<view class="title">真实姓名</view>
@@ -52,4 +53,4 @@
             <button class="cu-btn bg-gradual-green margin-tb-sm lg">提交认证申请</button>
         </view>
 	</form>
-</scroll-view>
+</view>

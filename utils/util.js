@@ -22,7 +22,11 @@ const checkMobilePhone = (phone)=> {
 		return true;
 	}
 }
+const percent = (point, n) => { //point数值 n保留几位小数(都为number)
+  return Math.round(point * 100 * Math.pow(10, n)) / Math.pow(10, n) + "%";
+}
 module.exports = {
   formatTime: formatTime,
-  checkMobilePhone: checkMobilePhone
+  checkMobilePhone: checkMobilePhone,
+  percent
 }

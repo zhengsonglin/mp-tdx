@@ -8,7 +8,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    PageCur: app.globalData.tabBar
+    PageCur: app.globalData.tabBar,
+    initState: null
   },
   //事件处理函数
   bindViewTap: function() {
@@ -20,7 +21,15 @@ Page({
   //监听子组件导航切换
   bindNavChange(e){
     this.setData({
-      PageCur:e.detail
+      PageCur:e.detail,
+      initState: 0  //手动切换tab时，就重置为0，查看全部订单
+    })
+  },
+  //监听tab非直接点击切换(如点击其他按钮切换tab)
+  bindTabChange(e){
+    this.setData({
+      PageCur:e.detail.PageCur,
+      initState: e.detail.state
     })
   },
   onLoad: function () {
@@ -52,7 +61,7 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
+    //console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,

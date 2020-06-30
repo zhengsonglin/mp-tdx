@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "mp-tabbar": "../component/tabbar/tabbar",
-    "home": "/pages/home/index",
+    "home": "/pages/home/index/index",
     "question": "/pages/question/index",
     "orders": "/pages/orders/index/index",
     "user-center": "/pages/userCenter/index/index"

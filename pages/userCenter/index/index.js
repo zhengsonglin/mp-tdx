@@ -1,4 +1,5 @@
 // pages/userCenter/index.js
+const app = getApp();
 Page({
 
     /**
@@ -18,6 +19,12 @@ Page({
         this.setData({
             orderType: e.currentTarget.dataset.otype
         })
+    },
+    //跳转到相应订单
+    switchTab: function (e) {    
+        app.globalData.tabBar = "order"
+        //console.log("e", e.currentTarget.dataset.state)       
+        this.triggerEvent('trigerTabChange', {PageCur: "order", state: e.currentTarget.dataset.state}) 
     },
     /**
      * 生命周期函数--监听页面加载

@@ -9,16 +9,24 @@ Component({
      * 组件的属性列表
      */
     properties: {
-
+        PageCur:{
+            type:String,//属性名
+            value: app.globalData.tabBar//属性初始值
+        }
     },
 
     /**
      * 组件的初始数据
      */
     data: {
-        PageCur: app.globalData.tabBar
+        //PageCur:  app.globalData.tabBar
     },
-
+     /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+	ready: function () {
+        //console.log(123, this.data.currBar )
+    },
     /**
      * 组件的方法列表
      */

@@ -5,7 +5,20 @@ Component({
         addGlobalClass: true
     },
     properties: {
-
+        state:{
+            type:null,//属性名
+            value: 0,//属性初始值
+            observer: function(newVal, oldVal) {
+                // 属性值变化时执行
+                //console.log(newVal, oldVal)
+                if(newVal && newVal != oldVal){
+                    var index = this.data.navTabList.filter((item)=> item.state == newVal)[0].num - 1;
+                    this.setData({
+                        tabIndex: index || 0
+                    })
+                }
+            }
+        }
     },
     /**
      * 页面的初始数据
@@ -144,7 +157,8 @@ Component({
         attached() {
             console.log("在组件实例进入页面节点树时执行")
         },
-        ready() {
+        ready(e) {
+            console.log(e)
             console.log("在组件在视图层布局完成后执行")
             // 刷新组件
             this.refreshView = this.selectComponent("#refreshView")

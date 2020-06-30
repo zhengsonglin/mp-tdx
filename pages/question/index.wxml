@@ -1,5 +1,5 @@
 <!--pages/question/index.wxml-->
-<scroll-view scroll-y class="scrollPage">
+<view class="fullScreenPage">
 	<cu-custom bgColor="bg-gradual-green">
 		<view slot="content">问题集</view>
 	</cu-custom>
@@ -227,4 +227,4 @@
 	</view>
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>
-</scroll-view>
+</view>

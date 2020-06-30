@@ -1,5 +1,5 @@
 <!--pages/userCenter/addFeedBack/index.wxml-->
-<scroll-view scroll-y class="scrollPage bg-white">
+<view class="fullScreenPage bg-white">
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
 		<view slot="content">添加意见</view>
@@ -19,4 +19,4 @@
         </view>
     </form>
 
-</scroll-view>
+</view>

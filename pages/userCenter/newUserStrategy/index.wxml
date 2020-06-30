@@ -1,5 +1,5 @@
 <!--pages/userCenter/newUserStrategy/index.wxml-->
-<scroll-view scroll-y class="scrollPage bg-white">
+<view class="fullScreenPage bg-white">
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
 		<view slot="content">新手攻略</view>
@@ -126,4 +126,4 @@
 		</view>
 	</view>
     -->
-</scroll-view>
+</view>

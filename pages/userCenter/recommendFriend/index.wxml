@@ -1,5 +1,5 @@
 <!--pages/userCenter/recommendFriend/index.wxml-->
-<scroll-view scroll-y class="scrollPage">
+<view class="fullScreenPage">
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
 		<view slot="content">推荐好友</view>
@@ -12,4 +12,4 @@
 			<image src="/img/recommend-qrcode1.png" mode="aspectFit" />
 		</view>
 	</view>
-</scroll-view>
+</view>

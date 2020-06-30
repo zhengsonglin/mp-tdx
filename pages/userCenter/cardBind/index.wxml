@@ -1,5 +1,5 @@
 <!--pages/userCenter/cardBind/index.wxml-->
-<scroll-view scroll-y class="scrollPage">
+<view class="fullScreenPage">
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
 		<view slot="content">绑定银行卡</view>
@@ -50,4 +50,4 @@
             <button class="cu-btn bg-gradual-green margin-tb-sm lg">提交</button>
         </view>
     </form>
-</scroll-view>
+</view>

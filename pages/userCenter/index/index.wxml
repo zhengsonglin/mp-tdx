@@ -1,9 +1,9 @@
 <!--pages/userCenter/index.wxml-->
-<cu-custom bgColor="bg-gradual-green">
-	<view slot="content">会员中心</view>
-</cu-custom>
+<view class="fullScreenPage">
+	<cu-custom bgColor="bg-gradual-green">
+		<view slot="content">会员中心</view>
+	</cu-custom>
 
-<scroll-view scroll-y class="scrollPage">
 	<!--头部信息-->
 	<view class="user-info relative">
 		<view class="text-white text-center padding-top padding-bottom-sm">
@@ -47,22 +47,22 @@
 			<text class="margin-left-xs {{orderType == 2 ? 'active text-bold' : ''}}" bindtap="setOrderType" data-oType="2">熊抢购任务</text>
 		</view>
 		<view class="row-2 grid col-4 text-center padding-tb-sm">
-			<view class="order-state">
+			<view class="order-state" bindtap="switchTab" data-state="2">
 				<view><text class="li-icon iconfont icon-moban " style="color:#d17575"></text></view>
 				<view>已申请</view>
 				<view>15</view>
 			</view>
-			<view class="order-state" wx:if="{{orderType==1}}">
+			<view class="order-state" wx:if="{{orderType==1}}" bindtap="switchTab" data-state="3">
 				<view><text class="li-icon iconfont icon-tijiao " style="color:#509de8"></text></view>
 				<view>已提交</view>
 				<view>16</view>
 			</view>
-			<view class="order-state">
+			<view class="order-state" bindtap="switchTab" data-state="4">
 				<view><text class="li-icon iconfont icon-shenhe2 " style="color:#ecb071"></text></view>
 				<view>待审核</view>
 				<view>17</view>
 			</view>
-			<view class="order-state">
+			<view class="order-state" bindtap="switchTab" data-state="5">
 				<view><text class="li-icon iconfont icon-wancheng " style="color:#e9769f"></text></view>
 				<view>已完成</view>
 				<view>18</view>
@@ -178,4 +178,4 @@
 	</view>
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>
-</scroll-view>
+</view>

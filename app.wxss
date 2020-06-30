@@ -12,7 +12,9 @@
 .absolute{
   position: absolute;
 }
-
+.fullScreenPage {
+  height: 100vh;
+}
 .scrollPage {
   height: 100vh;
 }

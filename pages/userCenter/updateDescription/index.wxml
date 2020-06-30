@@ -1,6 +1,6 @@
 <!--pages/userCenter/updateDescription/index.wxml-->
 <!--pages/userCenter/feedBack/index.wxml-->
-<scroll-view scroll-y class="scrollPage bg-white">
+<view class="fullScreenPage bg-white">
 	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
 		<view slot="backText">返回</view>
 		<view slot="content">更新通知</view>
@@ -14,5 +14,5 @@
         </view>
 
     </view>
-</scroll-view>
+</view>
 

@@ -3,4 +3,4 @@
 	<view slot="backText">返回</view>
 	<view slot="content">测试</view>
 </cu-custom>
-<web-view src="http://localhost:8080"></web-view>
+<web-view src="http://172.17.223.84:8080/"></web-view>

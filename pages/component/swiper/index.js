@@ -1,4 +1,17 @@
 // pages/component/swiper/index.js
+var imgArr = [
+    'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/newsPicture/05558951-de60-49fb-b674-dd906c8897a6',
+    'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/coursePicture/0fbcfdf7-0040-4692-8f84-78bb21f3395d',
+    'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/management-school-picture/7683b32e-4e44-4b2f-9c03-c21f34320870'
+]
+/*
+imgArr = [
+    'http://localhost:8080/img/s-1.jpg',
+    'http://localhost:8080/img/s-2.jpg',
+    'http://localhost:8080/img/s-3.jpg',
+    'http://localhost:8080/img/s-4.jpg'
+]
+*/
 Component({
     //允许组件使用全局css样式即最外层的app.wxss
     options: {
@@ -42,11 +55,10 @@ Component({
         },
         datas: {
             type: Array,
-            value: ['/img/s-1.jpg','/img/s-2.jpg','/img/s-3.jpg','/img/s-4.jpg'],
+            //value: ['/img/s-1.jpg','/img/s-2.jpg','/img/s-3.jpg','/img/s-4.jpg'],
+            value: imgArr,
             default:()=> [//这是错误写法，默认值用value属性
-                'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/newsPicture/05558951-de60-49fb-b674-dd906c8897a6',
-                'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/coursePicture/0fbcfdf7-0040-4692-8f84-78bb21f3395d',
-                'http://mss.sankuai.com/v1/mss_51a7233366a4427fa6132a6ce72dbe54/management-school-picture/7683b32e-4e44-4b2f-9c03-c21f34320870'
+                ...imgArr
             ]
         }
     },
