@@ -1,9 +1,9 @@
 <!--pages/userCenter/index.wxml-->
-<view class="fullScreenPage">
-	<cu-custom bgColor="bg-gradual-green">
-		<view slot="content">会员中心</view>
-	</cu-custom>
 
+<cu-custom bgColor="bg-gradual-green">
+	<view slot="content">会员中心</view>
+</cu-custom>
+<scroll-view scroll-y refresher-triggered="{{triggered}}" refresher-enabled bindrefresherrefresh="onRefresherrefresh" style="height: calc(100vh - {{CustomBar}}px)">
 	<!--头部信息-->
 	<view class="user-info relative">
 		<view class="text-white text-center padding-top padding-bottom-sm">
@@ -178,4 +178,4 @@
 	</view>
 	<!--适配底部导航栏-->
 	<view class='cu-tabbar-height'></view>
-</view>
+</scroll-view>

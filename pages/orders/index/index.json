@@ -1,5 +1,6 @@
 {
+  "component": true,
   "usingComponents": {
-    "refresh-view": "../component/RefreshView/refresh-view"
+    "refresh-view": "../../component/RefreshView/refresh-view"
   }
 }

@@ -56,7 +56,7 @@ Component({
         datas: {
             type: Array,
             //value: ['/img/s-1.jpg','/img/s-2.jpg','/img/s-3.jpg','/img/s-4.jpg'],
-            value: imgArr,
+            value: [...imgArr],
             default:()=> [//这是错误写法，默认值用value属性
                 ...imgArr
             ]

@@ -1,4 +1,6 @@
 // pages/home/index.js
+const util = require('../../../utils/util.js')
+
 const app = getApp();
 let pageStart = 0;
 
@@ -27,8 +29,9 @@ Component({
             {title:"多用途万能胶*1桶", pid:"10015", price: "38.8", task_count:8, order_count:2, is_img:1, img:"https://img.alicdn.com/imgextra/i4/811742228/O1CN01atB2z21SKT2RBKVe6_!!811742228.png", endTime:"2020-04-09 00:00:00"},
             {title:"安太医男用延时湿巾3片", pid:"10016", price: "38.8", task_count:8, order_count:2, is_img:1, img:"https://img.alicdn.com/imgextra/i2/2207599770596/O1CN0102EkNk1GH0et8StCB_!!2207599770596.jpg", endTime:"2020-04-12 00:00:00"},
             {title:"多用途万能胶*1桶", pid:"10017", price: "38.8", task_count:8, order_count:2, is_img:1, img:"https://img.alicdn.com/imgextra/i4/811742228/O1CN01atB2z21SKT2RBKVe6_!!811742228.png", endTime:"2020-04-13 00:00:00"},
-        ]
-        
+        ],
+        isLoadingMore: true,
+        triggered: false
     },
     methods: {
         //搜索input发生change事件
@@ -69,6 +72,39 @@ Component({
                 inputPlaceholderColor: "color:rgba(" + c + ", " + c + ", " + c + ", 1)",
             })
         },
+        //滚动到底部时
+        onScrollBottom(e){
+            let {isLoadingMore, datas} = this.data
+            let random = datas.slice(0,8), addData = util.getRandomFromArray(random, 5, false)
+ 
+            if(isLoadingMore){
+                let newDatas = datas.concat(addData), newDatasLen = newDatas.length, maxCount = 30
+              
+                setTimeout(()=>{
+                    this.setData({
+                        "datas": newDatasLen>=30?newDatas.slice(0,30):newDatas,
+                        "isLoadingMore": !(newDatasLen>=30)
+                    })
+
+                },1500)
+                
+            }
+        },
+        //下拉刷新操作
+        onRefresherrefresh(e){
+            console.log(e)
+            if (this._freshing) return
+            this._freshing = true
+            setTimeout(() => {
+                this.setData({
+                    triggered: false,
+                })
+                this._freshing = false
+                wx.showToast({
+                  title: '刷新成功',
+                })
+            }, 1000)
+        },
         toDetal(e){
             console.log(e.currentTarget.dataset.item)
             wx.navigateTo({
@@ -96,21 +132,20 @@ Component({
         error() {
             console.log("每当组件方法抛出错误时执行")
         },
-        /*组件所在页面的生命周期 */
-        pageLifetimes: {
-            show: function () {
-                // 页面被展示
-                console.log("页面被展示")
-            },
-            hide: function () {
-                // 页面被隐藏
-                console.log("页面被隐藏")
-            },
-            resize: function (size) {
-                // 页面尺寸变化
-                console.log("页面尺寸变化")
-            }
+    },
+    /*组件所在页面的生命周期 */
+    pageLifetimes: {
+        show: function () {
+            // 页面被展示
+            console.log("页面被展示")
+        },
+        hide: function () {
+            // 页面被隐藏
+            console.log("页面被隐藏")
+        },
+        resize: function (size) {
+            // 页面尺寸变化
+            console.log("页面尺寸变化")
         }
-
     }
 })

@@ -2,14 +2,14 @@
 <!-- 引入wxs语法，使得wxml中可以直接调用js方法，如format -->
 <wxs module="filters" src="../../../wxs/filters.wxs"></wxs>
 
-<scroll-view scroll-y class="scrollPage" bindscroll="onPageScroll">
-	<!--自定义导航栏-->
-	<cu-custom bgColor="bg-gradual-green">
-		<view slot="content">首页</view>
-	</cu-custom>
+<!--自定义导航栏-->
+<cu-custom bgColor="bg-gradual-green">
+	<view slot="content">首页</view>
+</cu-custom>
 
+<scroll-view scroll-y  bindscroll="onPageScroll" refresher-triggered="{{triggered}}"  bindscrolltolower="onScrollBottom" refresher-enabled bindrefresherrefresh="onRefresherrefresh" style="height: calc(100vh - {{CustomBar}}px)">
 	<!--搜索条-->
-	<view class="cu-bar search header fixed" style="top:{{CustomBar}}px;background-color:{{searchBgColor}};">
+	<view class="cu-bar search header fixed" style="top:0px;background-color:{{searchBgColor}};">
 		<view class="search-form round padding-right-sm padding-left-xs" style="background-color:{{inputBgColor}};color:{{inputColor}}">
 			<text class="cuIcon-search" style="font-size: 14px;"></text>
 			<input type="text" placeholder="请输入搜索关键词" confirm-type="search" value="{{searchKey}}" placeholder-style="{{inputPlaceholderColor}}" bindinput="onInputChange" bindconfirm="onSearch"></input>
@@ -43,7 +43,7 @@
 	</view>
 
 	<view>
-		<view class="flex bg-white padding-xs margin-sm" wx:for="{{datas}}" wx:key="pid">
+		<view class="flex bg-white padding-xs margin-sm" wx:for="{{datas}}" wx:key="index" wx:key="index">
 			<view class="l-item flex-sub">
 				<image src="{{item.img}}" mode="widthFix" class="response"></image>
 			</view>
@@ -62,6 +62,7 @@
 				</view>
 			</view>
 		</view>
+		<view class="cu-load {{isLoadingMore?'loading':'over'}}"></view>
 	</view>
 	
 	<!--适配底部导航栏-->
