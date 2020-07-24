@@ -23,8 +23,8 @@
         <view class="text-input">
             <input type="text" placeholder="请输入邀请码(必填)" maxlength="8" value="{{iCode}}" bindinput="updateValue" data-type="iCode"></input>
         </view>
-        <view class="text-input">
-			<button class="cu-btn bg-orange margin-tb-sm lg response shadow" bindtap="doRegister">注册</button>
+        <view class="text-input padding-top">
+			<button class="cu-btn bg-orange margin-tb lg response shadow" bindtap="doRegister">注册</button>
 		</view>
     </view>
 </view>

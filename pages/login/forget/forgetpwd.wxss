@@ -3,20 +3,20 @@ page {
   background-color: var(--white);
 }
 .forget-form{
-  padding-top: 160rpx;
+  padding-top: 100rpx;
 }
 .text-input {
   width: 80%;
-  margin: 0 auto 20px;
+  margin: 0 auto 40rpx;
 }
 .text-input input {
-  height: 40px;
-  border-radius: 3px;
+  height: 88rpx;
+  border-radius: 12rpx;
   background-color: #fff;
   -webkit-appearance: none;
-  border: 1px solid #ccc;
-  padding-left: 15px;
+  border: 2rpx solid #ccc;
+  padding-left: 30rpx;
 }
 .text-input .validCode{
-  width: 120px;
+  width: 240rpx;
 }

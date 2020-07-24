@@ -27,4 +27,13 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.clean{
+  overflow: hidden;
+}
+.width0{
+  width:0;
+}
+.text-line-through{
+  text-decoration: line-through;
+}
 /**自定义样式end**/

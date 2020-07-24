@@ -14,12 +14,12 @@
 		<view class="text-input">
 			<input type="password" placeholder="请输入密码" value="{{password}}"></input>
 		</view>
-		<view class="text-input">
+		<view class="text-input clean">
 			<navigator hover-class='none' url="/pages/login/register/register" class="fl">注册</navigator>
 			<navigator hover-class='none' url="/pages/login/forget/forgetpwd" class="fr">忘记密码</navigator>
 		</view>
 
-		<view class="text-input">
+		<view class="text-input padding-top">
 			<button class="cu-btn bg-orange margin-tb-sm lg response shadow" bindtap="toHome">登录</button>
 		</view>
 	</view>

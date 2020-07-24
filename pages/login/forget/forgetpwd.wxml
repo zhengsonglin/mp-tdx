@@ -21,7 +21,7 @@
 			<input type="password" placeholder="请确认新密码" maxlength="16" value="{{repwd}}" bindinput="updateValue" data-type="repwd"></input>
 		</view>
 
-		<view class="text-input">
+		<view class="text-input padding-top">
 			<button class="cu-btn bg-orange margin-tb-sm lg response shadow" bindtap="doSubmit">提交密码</button>
 		</view>
 	</view>

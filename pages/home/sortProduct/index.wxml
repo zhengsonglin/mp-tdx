@@ -1,0 +1,51 @@
+<!--pages/home/sortProduct/index.wxml-->
+<!-- 引入wxs语法，使得wxml中可以直接调用js方法，如format -->
+<wxs module="filters" src="../../../wxs/filters.wxs"></wxs>
+
+<view class="fullScreenPage bg-white">
+	<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+		<view slot="backText">返回</view>
+		<view slot="content">商品分类</view>
+	</cu-custom>
+
+	<view class="VerticalBox">
+        <!-- 左边scroll -->
+		<scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="height:calc(100vh - {{CustomBar}}px)">
+			<view class="cu-item text-lg {{item.id==TabCur?'text-green cur':''}}" wx:for="{{category}}" wx:key="id" bindtap='tabSelect' data-id="{{item.id}}">
+				{{item.short_name}}
+			</view>
+		</scroll-view>
+        <!-- 右边scroll -->
+		<scroll-view class="VerticalMain flex-sub" scroll-y scroll-with-animation style="height:calc(100vh - {{CustomBar}}px)" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+			<view class="padding-lr-xs" wx:for="{{category}}" wx:key="long_name" id="main-{{item.id}}">
+				<!-- 标题 -->
+                <view class='cu-bar solid-bottom bg-white'>
+					<view class='action text-bold text-lg text-green'>
+						<text class='cuIcon-title'></text>{{item.short_name}} </view>
+				</view>
+				<view class="cu-list menu-avatar">
+					<view class="cu-item padding-tb-sm padding-left-xs" wx:for="{{item.products}}" wx:for-item="sItem" wx:for-index="sIndex" wx:key="pa_id">
+						<view class="left-item" style="background-image:url({{sItem.img}});"></view>
+						<view class="right-item flex-sub flex flex-direction justify-around padding-left-sm width0">
+							<view class="text-lg text-pink text-cut">{{sItem.title}}</view>
+                            <view class="">垫付 <text class="text-red">￥{{sItem.price}}</text>
+                                <view class="cu-btn bg-red fr sm margin-right-xs" bindtap="toDetal" data-item="{{sItem}}">马上抢</view>
+                            </view>
+							<view class="progress">
+                                <view class="cu-progress radius striped active">
+                                    <view class="bg-red" style="width: {{filters.percent(sItem.order_count/sItem.task_count)}};">{{filters.percent(sItem.order_count/sItem.task_count)}}</view>
+                                </view>
+                            </view>
+						</view>
+						<!-- <view class="action">
+							<view class="text-grey text-xs">22:20</view>
+							<view class="cu-tag round bg-grey sm">5</view>
+						</view> -->
+					</view>
+				
+				</view>
+
+			</view>
+		</scroll-view>
+	</view>
+</view>

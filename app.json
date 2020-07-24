@@ -1,11 +1,13 @@
 {
     "pages": [
-        
         "pages/login/login",
         "pages/login/register/register",
         "pages/login/forget/forgetpwd",
         "pages/index/index",
         "pages/home/index/index",
+        "pages/home/productDetail/index",
+        "pages/home/sortProduct/index",
+        "pages/home/skillProduct/index",
         "pages/question/index",
         "pages/userCenter/index/index",
         "pages/logs/logs",
@@ -27,8 +29,7 @@
         "pages/userCenter/updateDescription/index",
         "pages/orders/index/index",
         "pages/orders/refundDetial/index",
-        "pages/orders/uploadScreenShot/index",
-        "pages/home/productDetail/index"
+        "pages/orders/uploadScreenShot/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

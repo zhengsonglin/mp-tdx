@@ -7,9 +7,8 @@
 	<view slot="content">首页</view>
 </cu-custom>
 
-<scroll-view scroll-y  bindscroll="onPageScroll" refresher-triggered="{{triggered}}"  bindscrolltolower="onScrollBottom" refresher-enabled bindrefresherrefresh="onRefresherrefresh" style="height: calc(100vh - {{CustomBar}}px)">
-	<!--搜索条-->
-	<view class="cu-bar search header fixed" style="top:0px;background-color:{{searchBgColor}};">
+<!--搜索条-->
+	<view class="cu-bar search header fixed" style="top:{{CustomBar}}px;background-color:{{searchBgColor}};">
 		<view class="search-form round padding-right-sm padding-left-xs" style="background-color:{{inputBgColor}};color:{{inputColor}}">
 			<text class="cuIcon-search" style="font-size: 14px;"></text>
 			<input type="text" placeholder="请输入搜索关键词" confirm-type="search" value="{{searchKey}}" placeholder-style="{{inputPlaceholderColor}}" bindinput="onInputChange" bindconfirm="onSearch"></input>
@@ -17,16 +16,23 @@
 		</view>
 	</view>
 
+<scroll-view scroll-y  bindscroll="onPageScroll" refresher-triggered="{{triggered}}"  bindscrolltolower="onScrollBottom" refresher-enabled bindrefresherrefresh="onRefresherrefresh" style="height: calc(100vh - {{CustomBar}}px)">
+	
+
 	<!--swiper轮播图-->
 	<mp-swiper height="{{swiperHeight}}"></mp-swiper>
 	<!--nav导航栏-->
 	<view class="bg-white margin-lr-sm margin-top-sm tabNav">
 		<view class="flex">
 			<view class="flex-sub padding-tb-xs">
-				<image src="/img/nav-1.png" mode="aspectFit" class="response pic"></image>
+				<navigator url="/pages/home/sortProduct/index" hover-class="none">
+					<image src="/img/nav-1.png" mode="aspectFit" class="response block pic"></image>
+				</navigator>
 			</view>
 			<view class="flex-sub padding-tb-xs">
-				<image src="/img/nav-2.png" mode="aspectFit" class="response pic"></image>
+				<navigator url="/pages/home/skillProduct/index" hover-class="none">
+					<image src="/img/nav-2.png" mode="aspectFit" class="response block pic"></image>
+				</navigator>
 			</view>
 		</view>
 	</view>
@@ -44,11 +50,11 @@
 
 	<view>
 		<view class="flex bg-white padding-xs margin-sm" wx:for="{{datas}}" wx:key="index" wx:key="index">
-			<view class="l-item flex-sub">
+			<view class="l-item flex-sub width0">
 				<image src="{{item.img}}" mode="widthFix" class="response"></image>
 			</view>
-			<view class="r-item flex-twice padding-left flex flex-direction justify-around">
-				<view class="text-black">{{item.title}}</view>
+			<view class="r-item flex-twice padding-left flex flex-direction justify-around width0">
+				<view class="text-black text-cut">{{item.title}}</view>
 				<view><text class="cu-tag bg-red light" wx:if="{{item.is_img==1}}">需晒图</text></view>
 				<view>
 					垫付：<text class="text-red text-bold text-lg">￥{{item.price}}</text>

@@ -1,4 +1,4 @@
 /* pages/question/index.wxss */
 .bottom-line-dashed {
-    border-bottom: 1px dashed red;
+    border-bottom: 2rpx dashed red;
 }

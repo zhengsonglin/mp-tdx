@@ -1,0 +1,57 @@
+/* pages/home/sortProduct/index.wxss */
+.VerticalBox{
+    display: flex;
+}
+
+.VerticalNav.nav {
+    width: 160rpx;
+    white-space: initial;
+  }
+  
+  .VerticalNav.nav .cu-item {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+    border: none;
+    height: 100rpx;
+    line-height: 100rpx;
+    position: relative;
+  }
+  .VerticalNav.nav .cu-item.cur {
+    /* background-color: #f1f1f1; */
+    border-bottom: 1px solid var(--green);
+  }
+  .VerticalNav.nav .cu-item.cur::after {
+    content: "";
+    width: 8rpx;
+    height: 30rpx;
+    border-radius: 10rpx 0 0 10rpx;
+    position: absolute;
+    background-color: currentColor;
+    top: 0;
+    right: 0rpx;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .VerticalMain{
+    background-color: #f1f1f1;
+    width: 0;
+  }
+  .VerticalMain .cu-list .cu-item{
+      height: auto;
+      border-bottom: 1px dashed #999;
+  }
+  .VerticalMain .cu-list .cu-item:first-child{
+      padding-top: 0;
+  }
+  .VerticalMain .cu-list .cu-item .left-item{
+    width: 200rpx;
+    height: 200rpx;
+    background-position: center center;
+    background-size: cover;
+  }
+  .VerticalMain .cu-list .cu-item .right-item{
+    height: 200rpx;
+}
