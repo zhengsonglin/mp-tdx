@@ -2,6 +2,9 @@
 .scroll-content .border{
     border: 1px solid var(--red)
 }
+.scroll-content .product-img{
+    max-height: 148px;
+}
 .scroll-content .lowerPrice{
     border-radius: 0 28rpx 28rpx 0;
 }

@@ -6,7 +6,7 @@
 	</cu-custom>
 	<scroll-view scroll-x class="bg-white nav fixed" style="top:{{CustomBar}}px">
 		<view class="flex text-center">
-			<view class="cu-item flex-sub {{index==tabIndex?'text-orange cur':''}}" wx:for="{{navTabList}}" wx:key="state" bindtap="navTabSelect" data-id="{{index}}">
+			<view class="cu-item flex-sub {{index==tabIndex?'text-orange cur':''}}" wx:for="{{navTabList}}" wx:key="state" bindtap="navTabSelect" data-id="{{index}}" data-item="{{item}}">
 				{{item.name}}
 			</view>
 		</view>

@@ -20,16 +20,7 @@ Component({
         inputPlaceholderColor: "color:rgba(255,255,255,1)",
         searchKey: "",
         advertisingList: app.globalData.advertisingList,
-        datas: [
-            {title:"多用途万能胶*1桶", pid:"10010", price: "38.8", task_count:8, order_count:7, is_img:1, img:"https://img.alicdn.com/imgextra/i4/811742228/O1CN01atB2z21SKT2RBKVe6_!!811742228.png", endTime:"2020-04-05 00:00:00"},
-            {title:"燃气灶聚火防风节能罩1个装", pid:"10011", price: "78.8", task_count:5, order_count:3, is_img:-1, img:"https://img.alicdn.com/imgextra/i2/2201461853628/O1CN01MPmb751cffWxj0RQj_!!2201461853628.jpg", endTime:"2020-04-0600:00:00"},
-            {title:"晒图-椰壳清洁布不伤手", pid:"10012", price: "30.6", task_count:8, order_count:3, is_img:1, img:"https://img.alicdn.com/imgextra/i2/811742228/O1CN01q04GiB1SKT1vIJPAh_!!811742228.jpg", endTime:"2020-04-07 00:00:00"},
-            {title:"美甲套装7件套+随机样品", pid:"10013", price: "138.8", task_count:8, order_count:6, is_img:1, img:"https://img.alicdn.com/imgextra/i3/2206377044743/O1CN010rzUCW1kuL91Ypiv8_!!2206377044743.jpg", endTime:"2020-04-08 00:00:00"},
-            {title:"隔热垫绿色圆形1个", pid:"10014", price: "38.8", task_count:8, order_count:7, is_img:1, img:"https://img.alicdn.com/imgextra/i2/1058862643/O1CN01jLBTCm1VOXOsAwwrL_!!1058862643.jpg", endTime:"2020-04-05 00:00:00"},
-            {title:"多用途万能胶*1桶", pid:"10015", price: "38.8", task_count:8, order_count:2, is_img:1, img:"https://img.alicdn.com/imgextra/i4/811742228/O1CN01atB2z21SKT2RBKVe6_!!811742228.png", endTime:"2020-04-09 00:00:00"},
-            {title:"安太医男用延时湿巾3片", pid:"10016", price: "38.8", task_count:8, order_count:2, is_img:1, img:"https://img.alicdn.com/imgextra/i2/2207599770596/O1CN0102EkNk1GH0et8StCB_!!2207599770596.jpg", endTime:"2020-04-12 00:00:00"},
-            {title:"多用途万能胶*1桶", pid:"10017", price: "38.8", task_count:8, order_count:2, is_img:1, img:"https://img.alicdn.com/imgextra/i4/811742228/O1CN01atB2z21SKT2RBKVe6_!!811742228.png", endTime:"2020-04-13 00:00:00"},
-        ],
+        datas: [...app.globalData.products],
         isLoadingMore: true,
         triggered: false
     },
@@ -75,15 +66,15 @@ Component({
         //滚动到底部时
         onScrollBottom(e){
             let {isLoadingMore, datas} = this.data
-            let random = datas.slice(0,8), addData = util.getRandomFromArray(random, 5, false)
+            let random = datas.slice(0,datas.length), addData = util.getRandomFromArray(random, 10, false)
  
             if(isLoadingMore){
-                let newDatas = datas.concat(addData), newDatasLen = newDatas.length, maxCount = 30
+                let newDatas = datas.concat(addData), newDatasLen = newDatas.length, maxCount = 100
               
                 setTimeout(()=>{
                     this.setData({
-                        "datas": newDatasLen>=30?newDatas.slice(0,30):newDatas,
-                        "isLoadingMore": !(newDatasLen>=30)
+                        "datas": newDatasLen>=maxCount?newDatas.slice(0,maxCount):newDatas,
+                        "isLoadingMore": !(newDatasLen>=maxCount)
                     })
 
                 },1500)

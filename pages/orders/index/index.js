@@ -26,6 +26,7 @@ Component({
     data: {
         CustomBar: app.globalData.CustomBar,
         tabIndex: 0,
+        orders: [...app.globalData.orders],
         navTabList: [
             {state:"1", name:"全部", num:1},
             {state:"2", name:"已领取", num:2},
@@ -33,50 +34,37 @@ Component({
             {state:"4", name:"待审核", num:4},
             {state:"5", name:"已完成", num:5},   
         ],
-        datas:[
-            {
-                id:1, shop_name:"匠石独韵", state:1, stateText:"已领取", title :"10包抽纸-限时抢购", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i3/931057900/O1CN01Wj7Sac28EFTwOMLx4_!!931057900.jpg"
-            },
-            {
-                id:2, shop_name:"匠石独韵", state:1, stateText:"已领取", title :"10包抽纸-限时抢购", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i4/1087692074/O1CN01ZNwFlF1RBw0ghBQhc_!!1087692074.jpg"
-            },
-            {
-                id:3, shop_name:"匠石独韵", state:1, stateText:"已领取", title :"10包抽纸-限时抢购", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i4/1037143081/O1CN01MsseCw1Yd8nanBztW_!!1037143081.jpg"
-            },
-            {
-                id:4, shop_name:"匠石独韵", state:1, stateText:"已领取", title :"10包抽纸-限时抢购", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i1/2203204267741/O1CN01x9ZTQu273QVYzD6nH_!!2203204267741.jpg"
-            },
-            {
-                id:5, shop_name:"匠石独韵", state:1, stateText:"已领取", title :"10包抽纸-限时抢购", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i4/645273380/O1CN01qgN3QK1aq5HbA4uhC_!!645273380.jpg"
-            },
-            {
-                id:6, shop_name:"匠石独韵", state:1, stateText:"已领取", title :"10包抽纸-限时抢购", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i3/3370777002/O1CN01NblG6321axq9G1Bim_!!3370777002.jpg"
-            },
-            {
-                id:7, shop_name:"匠石独韵", state:1, stateText:"已领取", title :"10包抽纸-限时抢购", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i3/931057900/O1CN01Wj7Sac28EFTwOMLx4_!!931057900.jpg"
-            },
-        ],
+        datas:[],
         showProductDialog: false,
         productItem: {},
         showRemarkDialog: false
     },
     methods: {
-        navTabSelect: function (e) {
+        navTabSelect: function (e) {//item
             console.log(e)
             wx.showLoading({
                 title: '加载中',
                 mask: true,
             })
+            let {id, item} = e.currentTarget.dataset
+            let orderDatas = []
+            if(item.state==1){  //全部
+                this.data.orders.forEach((sItem)=>{
+                    orderDatas.push(...sItem.data)
+                })
+            }else{
+                orderDatas = this.data.orders.filter((sItem)=>sItem.state==item.state)[0].data
+            }
+    
             /**/
             this.setData({
-                tabIndex: e.currentTarget.dataset.id
+                tabIndex: id,
+                datas:orderDatas
             }) 
-            
-              
+  
             setTimeout(function () {
                 wx.hideLoading()
-            }, 1000)
-            
+            }, 800)      
         },
         //显示商品信息
         showGoodsInfo: function (e) {
@@ -162,6 +150,13 @@ Component({
             console.log("在组件在视图层布局完成后执行")
             // 刷新组件
             this.refreshView = this.selectComponent("#refreshView")
+
+            let {orders} = this.data
+            let orderDatas = []
+            orders.forEach((item)=>{
+                orderDatas.push(...item.data)
+            })
+            this.setData({datas:orderDatas})
         },
         moved() {
             console.log("在组件实例被移动到节点树另一个位置时执行")
