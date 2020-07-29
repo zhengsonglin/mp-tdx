@@ -15,11 +15,11 @@ Component({
       type: String,
       default: ''
     }, 
-    isCustom: {
+    isCustom: { //isCustom和isBack属性只能二选一，否则样式冲突
       type: [Boolean, String],
       default: false
     },
-    isBack: {
+    isBack: {  //isCustom和isBack属性只能二选一，否则样式冲突
       type: [Boolean, String],
       default: false
     },

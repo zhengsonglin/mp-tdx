@@ -11,10 +11,10 @@ Component({
             observer: function(newVal, oldVal) {
                 // 属性值变化时执行
                 //console.log(newVal, oldVal)
-                if(newVal && newVal != oldVal){
-                    var index = this.data.navTabList.filter((item)=> item.state == newVal)[0].num - 1;
+                if(newVal && newVal != oldVal){                  
+                    var index = this.data.navTabList.filter((item)=> item.state == newVal)[0].num - 1;                   
                     this.setData({
-                        tabIndex: index || 0
+                        tabIndex: index || 0          
                     })
                 }
             }
@@ -41,7 +41,6 @@ Component({
     },
     methods: {
         navTabSelect: function (e) {//item
-            console.log(e)
             wx.showLoading({
                 title: '加载中',
                 mask: true,
@@ -146,17 +145,25 @@ Component({
             console.log("在组件实例进入页面节点树时执行")
         },
         ready(e) {
-            console.log(e)
+            //console.log(e)
             console.log("在组件在视图层布局完成后执行")
             // 刷新组件
             this.refreshView = this.selectComponent("#refreshView")
 
-            let {orders} = this.data
-            let orderDatas = []
-            orders.forEach((item)=>{
-                orderDatas.push(...item.data)
-            })
+            wx.showLoading({ title: '加载中',mask: true })
+            let {orders, tabIndex} = this.data
+            let orderDatas = []            
+             
+            if(tabIndex==0){
+                orders.forEach((item)=>{
+                    orderDatas.push(...item.data)
+                })
+            }else{
+                orderDatas = orders.filter((sItem)=>sItem.num==tabIndex+1)[0].data
+            }
+            
             this.setData({datas:orderDatas})
+            setTimeout(function () {wx.hideLoading()}, 200) 
         },
         moved() {
             console.log("在组件实例被移动到节点树另一个位置时执行")
