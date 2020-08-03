@@ -15,15 +15,16 @@
 	<scroll-view scroll-y bindtouchstart='handletouchstart' bindtouchmove='handletouchmove' bindtouchend='handletouchend' bindtouchcancel='handletouchcancel' style="height:calc(100vh - {{CustomBar}}px - 100rpx - 90rpx);margin-top:90rpx;">
 		<refresh-view id='refreshView' backgroundColor="#fff" bind:onRefresh="onPullDownRefresh" refreshHeight="100" bind:onPullState="_pullState" />
 		<view class="order-item bg-white margin-sm" wx:for="{{datas}}" wx:key="id">
-			<view class="o-top">
-				<view class="tag-wrap flex justify-between text-white">
-					<view class=""><text class="cu-tag bg-orange margin-right-sm">淘宝</text>{{item.shop_name}}</view>
-					<view class=" ">任务状态:<text class="margin-left-sm text-df">{{item.stateText}}</text></view>
+			
+			<view class="tag-wrap flex justify-between text-white">
+				<view class=""><text class="cu-tag bg-orange margin-right-sm">淘宝</text>{{item.shop_name}}</view>
+				<view class=" ">任务状态:<text class="margin-left-sm text-df">{{item.stateText}}</text></view>
+			</view>
+			<view class="c-wrap flex">
+				<view class="o-top-l padding-xs">
+					<image src="{{item.url}}" mode="widthFix" lazy-load="{{true}}" style="width:100%;height:auto"></image>
 				</view>
-				<view class="o-top-l fl padding-xs">
-					<image src="{{item.url}}" mode="widthFix"></image>
-				</view>
-				<view class="o-top-r fl padding-xs text-sm">
+				<view class="o-top-r padding-xs text-sm flex-sub">
 					<view class="text-df"><text>{{item.title}}</text></view>
 					<view class="margin-top-xs ">订单号:<text class="margin-left-xs">{{item.orderNo}}</text></view>
 					<view class="margin-top-xs ">总价:<text class="margin-left-xs text-orange">{{item.price}}</text></view>
@@ -31,7 +32,7 @@
 					<view class="margin-top-xs">买家旺旺:<text class="margin-left-xs text-blue">zold845517008</text></view>
 				</view>
 			</view>
-			<view class="o-bottom">
+			<view class="o-bottom margin-top-sm">
 				<view>
 					<button class="cu-btn sm bg-red margin-left-sm" bindtap="showGoodsInfo" data-item="{{item}}">商品信息</button>
 					<button class="cu-btn sm bg-blue margin-left" bindtap="toRefundDetail" data-item="{{item}}">申请售后</button>

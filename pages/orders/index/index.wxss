@@ -2,21 +2,17 @@
 .scrollPage .order-item{
     
 }
-.order-item .o-top{
-    overflow: hidden;
-}
-.o-top .tag-wrap{
+.order-item .tag-wrap{
     padding: 8rpx 12rpx;
     background: #cdc0bf;
     font-size: 26rpx;
 }
-.o-top .tag-wrap .o-tag{
 
-}
 .order-item .o-top-l{
-    width:40%;
+    width: 270rpx;
+    height: 260rpx;
 }
 .order-item .o-top-r{
-    width: 60%;
+    width: 0;
     color: #333;
 }

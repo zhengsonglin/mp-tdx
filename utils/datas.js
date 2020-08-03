@@ -26,13 +26,33 @@ const advertisingList = [{
 
 const products = [{
         title: "发货一团宝宝毛线（一团一两）",
-        pid: "10004",
+        pid: "10002",
         price: "9.8",
         task_count: 8,
         order_count: 6,
         is_img: 1,
         img: "https://img.alicdn.com/imgextra/i3/3244646190/O1CN01FjPrGT1vb4G8mNeqP_!!3244646190.jpg",
         endTime: "2020-03-29 00:00:00"
+    },
+    {
+        title: "抖音同款短袖",
+        pid: "10003",
+        price: "40",
+        task_count: 10,
+        order_count: 9,
+        is_img: 1,
+        img: "https://img.alicdn.com/imgextra/i3/2236116767/O1CN01Mzdfu81zrKn4VqXBo_!!2236116767.jpg",
+        endTime: "2020-03-29 12:20:30"
+    },
+    {
+        title: "短袖上衣",
+        pid: "10004",
+        price: "55",
+        task_count: 7,
+        order_count: 6,
+        is_img: 1,
+        img: "https://img.alicdn.com/imgextra/i1/1863576895/O1CN01YkBqEM20nxUHhx0B3_!!1863576895.jpg",
+        endTime: "2020-03-29 12:20:50"
     },
     {
         title: "芒果1斤",
@@ -539,7 +559,6 @@ const category = [{
         "products": [{
                 "img": "https://img.alicdn.com/imgextra/i2/2200685271546/O1CN01LLn8Ky1NI6vhe5Ylk_!!2200685271546.jpg",
                 "pa_id": 859087,
-
                 "activity_type": 1,
                 "title": "抖音同款短袖",
                 "task_number": 3,
@@ -551,8 +570,21 @@ const category = [{
                 "task_count": 7,
                 "is_img": -1,
                 "is_remote": -1,
-
-
+            },
+            {
+                "img": "https://img.alicdn.com/imgextra/i3/2236116767/O1CN01Mzdfu81zrKn4VqXBo_!!2236116767.jpg",
+                "pa_id": 859097,
+                "activity_type": 1,
+                "title": "抖音同款短袖", 
+                "task_number": 3,
+                "shop_type": "2",
+                "price": 35.5,
+                "t_id": 1504323,
+                "current_price": 9.9,
+                "order_count": 6,
+                "task_count": 7,
+                "is_img": -1,
+                "is_remote": -1,
             },
             {
                 "img": "https://img.alicdn.com/imgextra/i2/2200806668913/O1CN01lAL8XP2FiCkE4dTmB_!!2200806668913.jpg",
@@ -677,7 +709,6 @@ const category = [{
         "products": [{
                 "img": "https://img.alicdn.com/imgextra/i4/2247067269/O1CN01yk251623ZFc2P6h1G_!!2247067269.jpg",
                 "pa_id": 860343,
-
                 "activity_type": 1,
                 "title": "单件纯黑小吊带内衣",
                 "task_number": 1,
@@ -695,7 +726,6 @@ const category = [{
             {
                 "img": "https://img.alicdn.com/imgextra/i4/2247067269/O1CN01yk251623ZFc2P6h1G_!!2247067269.jpg",
                 "pa_id": 860345,
-
                 "activity_type": 1,
                 "title": "单件黑色小吊带内衣",
                 "task_number": 1,
@@ -707,13 +737,11 @@ const category = [{
                 "task_count": 10,
                 "is_img": -1,
                 "is_remote": -1,
-
                 "sell_type": 1
             },
             {
                 "img": "https://img.alicdn.com/imgextra/i4/2247067269/O1CN01yk251623ZFc2P6h1G_!!2247067269.jpg",
                 "pa_id": 860346,
-
                 "activity_type": 1,
                 "title": "单件黑色小吊带内衣",
                 "task_number": 1,
@@ -725,13 +753,11 @@ const category = [{
                 "task_count": 6,
                 "is_img": -1,
                 "is_remote": -1,
-
                 "sell_type": 1
             },
             {
                 "img": "https://gd2.alicdn.com/imgextra/i2/2208414191569/O1CN01P21Cm51NSe2KrudKn_!!2208414191569.jpg_400x400.jpg",
                 "pa_id": 860186,
-
                 "activity_type": 1,
                 "title": "晒图5张-本品内裤*1",
                 "task_number": 2,
@@ -743,13 +769,11 @@ const category = [{
                 "task_count": 7,
                 "is_img": 1,
                 "is_remote": -1,
-
                 "sell_type": 2
             },
             {
                 "img": "https://gd2.alicdn.com/imgextra/i2/2208414191569/O1CN01P21Cm51NSe2KrudKn_!!2208414191569.jpg_400x400.jpg",
                 "pa_id": 860188,
-
                 "activity_type": 1,
                 "title": "晒图5张-本品内裤*1",
                 "task_number": 2,
@@ -761,7 +785,6 @@ const category = [{
                 "task_count": 4,
                 "is_img": 1,
                 "is_remote": -1,
-
                 "sell_type": 2
             }
         ]
@@ -1255,13 +1278,16 @@ const orders = [
     ]},
     {state:"4", name:"待审核", num:4, data:[
         {
-            id:41, shop_name:"匠石独韵", state:1, stateText:"待审核", title :"抖音同款短袖", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i3/2236116767/O1CN01ICOTCw1zrKn5hkVY0_!!2236116767.jpg"
+            id:41, shop_name:"匠石独韵", state:1, stateText:"待审核", title :"抖音同款短袖", orderNo:"1052622083563417922", price: 57, actPrice: 48.8, create_time: "2020-04-07 12:21", finish_time: "2020-04-10 12:48", url:"https://img.alicdn.com/imgextra/i3/2236116767/O1CN01Mzdfu81zrKn4VqXBo_!!2236116767.jpg"
         },
         {
             id:42, shop_name:"匠石独韵", state:1, stateText:"待审核", title :"晒图5张-防夹手安全门挡*1", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i2/2200806668913/O1CN01lAL8XP2FiCkE4dTmB_!!2200806668913.jpg"
         },
         {
             id:43, shop_name:"匠石独韵", state:1, stateText:"待审核", title :"空军一号supreme鞋贴纸", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i4/2100050759/O1CN01XOB4VQ1HTfDT06zRE_!!2100050759.jpg"
+        },
+        {
+            id:44, shop_name:"匠石独韵", state:1, stateText:"待审核", title :"抖音同款短袖", orderNo:"1052622083563417922", price: 177, actPrice: 168, create_time: "2020-04-06 12:21", finish_time: "2020-04-06 12:28", url:"https://img.alicdn.com/imgextra/i3/2236116767/O1CN01ICOTCw1zrKn5hkVY0_!!2236116767.jpg"
         },
     ]},
     {state:"5", name:"已完成", num:5, data:[

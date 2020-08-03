@@ -6,8 +6,11 @@
     overflow: hidden;
     border-radius: 20rpx;
 }
-
-
+.product-item-wrap .l-item{
+	width: 222rpx;
+	height: 218rpx;
+}
+/*
 .pageView {
 	width: 100vw;
 	height: 100vh;
@@ -38,3 +41,4 @@
 	height: 120rpx;
 	border: solid 1rpx #e5e5e5;
 }
+*/

@@ -48,12 +48,12 @@
 		</advertising>
 	</view>
 
-	<view>
+	<view class="product-item-wrap">
 		<view class="flex bg-white padding-xs margin-sm" wx:for="{{datas}}" wx:key="index" wx:key="index">
-			<view class="l-item flex-sub width0">
-				<image src="{{item.img}}" mode="widthFix" class="response"></image>
+			<view class="l-item">
+				<image src="{{item.img}}" mode="widthFix" lazy-load="{{true}}" class="response" style="height: auto"></image>
 			</view>
-			<view class="r-item flex-twice padding-left flex flex-direction justify-around width0">
+			<view class="r-item flex-sub padding-left-sm flex flex-direction justify-around width0">
 				<view class="text-black text-cut">{{item.title}}</view>
 				<view><text class="cu-tag bg-red light" wx:if="{{item.is_img==1}}">需晒图</text></view>
 				<view>
