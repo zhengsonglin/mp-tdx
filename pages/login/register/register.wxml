@@ -5,23 +5,22 @@
         <view slot="content">注册</view>
     </cu-custom>
 
-
     <view class="response register-form">
         <view class="text-input">
-            <input type="text" placeholder="请输入手机号码" maxlength="11" value="{{phone}}" bindinput="updateValue" data-type="phone"></input>
+            <input type="text" class="input-field" placeholder="请输入手机号码" maxlength="11" value="{{phone}}" bindinput="updateValue" data-type="phone"></input>
         </view>
         <view class="text-input flex align-center justify-between">
-            <input placeholder="请输入验证码" class="flex-sub margin-right-lg" value="{{mCode}}" bindinput="updateValue" data-type="mCode"></input>
+            <input placeholder="请输入验证码" class="flex-sub margin-right-lg input-field" value="{{mCode}}" bindinput="updateValue" data-type="mCode"></input>
             <button class="cu-btn bg-orange shadow text-sm validCode" bindtap="getMessageCode" disabled="{{validCode.isDisabled}}" type="">{{validCode.btnText}}</button>
         </view>
         <view class="text-input">
-            <input type="password" placeholder="请输入密码" maxlength="16" value="{{pwd}}" bindinput="updateValue" data-type="pwd"></input>
+            <input type="password" class="input-field" placeholder="请输入密码" maxlength="16" value="{{pwd}}" bindinput="updateValue" data-type="pwd"></input>
         </view>
         <view class="text-input">
-            <input type="password" placeholder="请再次输入密码" maxlength="16" value="{{repwd}}" bindinput="updateValue" data-type="repwd"></input>
+            <input type="password" class="input-field" placeholder="请再次输入密码" maxlength="16" value="{{repwd}}" bindinput="updateValue" data-type="repwd"></input>
         </view>
         <view class="text-input">
-            <input type="text" placeholder="请输入邀请码(必填)" maxlength="8" value="{{iCode}}" bindinput="updateValue" data-type="iCode"></input>
+            <input type="text" class="input-field" placeholder="请输入邀请码(必填)" maxlength="8" value="{{iCode}}" bindinput="updateValue" data-type="iCode"></input>
         </view>
         <view class="text-input padding-top">
 			<button class="cu-btn bg-orange margin-tb lg response shadow" bindtap="doRegister">注册</button>

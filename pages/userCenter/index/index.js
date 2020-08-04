@@ -36,7 +36,7 @@ Component({
         //退出
         logout: function (e) {    
             wx.navigateTo({
-            url: '/pages/login/login',
+            url: '/pages/login/index/login',
             })
         },
         //下拉刷新操作

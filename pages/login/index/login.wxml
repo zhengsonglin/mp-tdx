@@ -9,10 +9,10 @@
 			<image src="/img/logo.png" mode="widthFix" class="logo"></image>
 		</view>
 		<view class="text-input">
-			<input type="text" placeholder="请输入账号" maxlength="11" value="{{phone}}"></input>
+			<input type="text" class="input-field" placeholder="请输入账号" maxlength="11" value="{{phone}}"></input>
 		</view>
 		<view class="text-input">
-			<input type="password" placeholder="请输入密码" value="{{password}}"></input>
+			<input type="password" class="input-field" placeholder="请输入密码" value="{{password}}"></input>
 		</view>
 		<view class="text-input clean">
 			<navigator hover-class='none' url="/pages/login/register/register" class="fl">注册</navigator>
