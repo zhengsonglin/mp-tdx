@@ -5,7 +5,7 @@
 		<view slot="content">修改密码</view>
 	</cu-custom>
 
-	<view class="container_title text-center text-red text-lg relative margin-lr-sm">修改登录密码<text class="iconfont icon-icon-dsj absolute"></text></view>
+	<view class="container_title text-center text-red text-lg relative margin-sm">修改登录密码<text class="iconfont icon-icon-dsj absolute"></text></view>
 
     <form>
         <view class="cu-form-group">

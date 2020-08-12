@@ -5,7 +5,7 @@
 		<view slot="content">{{pageTitle}}</view>
 	</cu-custom>
     
-    <view class="container_title text-center text-red text-lg relative margin-lr-sm">交易明细<text class="iconfont icon-icon-dsj absolute"></text></view>
+    <view class="container_title text-center text-red text-lg relative margin-sm">交易明细<text class="iconfont icon-icon-dsj absolute"></text></view>
 
     <view class="tab-content padding-lr-sm">
 		<view class="row-tb row-title text-center text-black">

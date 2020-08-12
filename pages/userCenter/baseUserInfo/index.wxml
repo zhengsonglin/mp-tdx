@@ -14,27 +14,6 @@
 	</cu-custom>
 
 	<form class="form">
-		<!--
-        <view class="cu-form-group margin-top">
-			<view class="title">注册时间</view>
-			<view>2020-04-07 19:15:50</view>
-		</view>
-		<view class="cu-form-group">
-			<view class="title">用户名</view>
-			<view>18598271043</view>
-		</view>
-       <view class="cu-form-group">
-            <view class="section__title">性别</view>
-            <picker bindchange="sexPickerChange" value="{{sexIndex}}" range="{{sexArray}}">
-                <view class="picker">{{sexIndex?sexArray[sexIndex]:'请选择性别'}}</view>
-            </picker>
-        </view>
-        <view class="cu-form-group">
-			<view class="title">年龄</view>
-			<view>请选择年龄</view>
-		</view>
-        -->
-
 		<mp-cells title="">
 			<mp-cell title="注册时间">
 				<view slot="footer">

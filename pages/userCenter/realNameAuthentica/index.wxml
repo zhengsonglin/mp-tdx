@@ -14,8 +14,8 @@
 			<view class="cu-form-group justify-start border-top">
 				<view class="title">性别</view>
 				<view>
-					<radio class="radio margin-right-xs"></radio>男
-					<radio class="radio margin-left margin-right-xs"></radio>女
+					<radio class="radio margin-right-xs" value="r1" checked="true" ></radio>男
+					<radio class="radio margin-left margin-right-xs" value="2"></radio>女
 				</view>
 			</view>
 		</radio-group>

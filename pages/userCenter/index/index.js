@@ -12,12 +12,12 @@ Component({
      */
     data: {
         userInfo: {
-            triggered: false,
             AB30Count: 20,
             FAccountBalance: 188.6,
             FUserName: "18598271043",
             FInvitationCode: "14983716"
         },
+        triggered: false,
         orderType: 1
     },
     methods: {
