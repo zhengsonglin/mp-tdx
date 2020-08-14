@@ -5,7 +5,6 @@ Page({
         TabCur: 19,
         MainCur: 19,
         VerticalNavTop: 0,
-        list: [],
         category:[
             //{"id":0,"short_name":"全部","long_name":"全部商品"},
             ...app.globalData.category
