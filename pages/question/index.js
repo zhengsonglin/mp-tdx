@@ -1,4 +1,5 @@
 // pages/question/index.js
+const app = getApp();
 Component({
   options: {
     addGlobalClass: true
@@ -7,7 +8,7 @@ Component({
 
   },
   data: {
-
+    CustomBar: app.globalData.CustomBar,
   },
   methods: {
 

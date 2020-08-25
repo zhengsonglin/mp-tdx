@@ -3,7 +3,7 @@
 	<cu-custom bgColor="bg-gradual-green">
 		<view slot="content">问题集</view>
 	</cu-custom>
-	<view class="content">
+	<view class="content" style="overflow:auto;height: calc(100vh - {{CustomBar}}px - 100rpx)">
 		<view class="section-1">
 			<view class="bg-white padding-sm">
 				<text class="text-black text-bold text-lg">注意事项</text>

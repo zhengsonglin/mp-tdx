@@ -3,8 +3,8 @@
     border: 1px solid var(--red)
 }
 .scroll-content .product-img{
-    max-height: 148px;
-    height: auto;
+    /* max-height: 148px;*/
+    height: 290rpx; 
 }
 .scroll-content .lowerPrice{
     border-radius: 0 28rpx 28rpx 0;

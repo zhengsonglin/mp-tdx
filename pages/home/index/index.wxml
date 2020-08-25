@@ -49,7 +49,7 @@
 	</view>
 
 	<view class="product-item-wrap">
-		<view class="flex bg-white padding-xs margin-sm" wx:for="{{datas}}" wx:key="index">
+		<view class="flex bg-white padding-sm margin-sm" wx:for="{{datas}}" wx:key="index">
 			<view class="l-item">
 				<image src="{{item.img}}" mode="widthFix" lazy-load="{{true}}" class="response" style="height: auto"></image>
 			</view>

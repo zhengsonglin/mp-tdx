@@ -11,6 +11,7 @@ Component({
      * 页面的初始数据
      */
     data: {
+        CustomBar: app.globalData.CustomBar,
         userInfo: {
             AB30Count: 20,
             FAccountBalance: 188.6,
